@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CodeCrafters - Interactive Computer Science Learning Platform</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      border: none;
+      font-size: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      color: #fff;
+    }
+
+    .carousel-inner {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .language-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.5s;
+    }
+
+    .language-card:hover {
+      transform: scale(1.05);
+    }
+
+    .language-info {
+      display: none;
+    }
+
+    .language-info.active {
+      display: block;
+    }
+
+    /* Additional CSS for the flipped state */
+    .language-card-container {
+      perspective: 1000px;
+    }
+
+    .language-card-flipper {
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .language-card-front,
+    .language-card-back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .language-card-back {
+      transform: rotateY(180deg);
+    }
+
+    .language-card-flipped {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="#hero">CodeCrafters</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto" href="about.html">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#web-development">Web Development</a></li>
+          <li><a class="nav-link scrollto" href="#mobile-development">Mobile Development</a></li>
+          <li><a class="nav-link scrollto" href="#game-development">Game Development</a></li>
+        
+          <li><a class="nav-link scrollto" href="#community-forum">Community Forum</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- ======= Home Section ======= -->
+  <section id="home" class="d-flex align-items-center justify-content-center">
+    <div class="container position-relative">
+      <h1>Welcome to CodeCrafters</h1>
+      <h2>Interactive Learning Platform</h2>
+      <a href="#programming-languages" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Home Section -->
+
+  <!-- ======= Programming Languages Section ======= -->
+  <section id="programming-languages" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h3 class="section-title">Programming Languages Short Info</h3>
+      </div>
+      <div class="row">
+        <!-- HTML Box -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="language-box" onclick="this.classList.toggle('flipped')">
+            <div class="language-box-front" style="background-color: #E0BBE4;">
+              <h3>HTML</h3>
+            </div>
+            <div class="language-box-back">
+              <div class="language-info active">
+                <p>HTML is the standard markup language for creating web pages and web applications. With HTML, you can structure content and define its meaning. It is the backbone of every web page.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CSS Box -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="language-box" onclick="this.classList.toggle('flipped')">
+            <div class="language-box-front" style="background-color: #957DAD;">
+              <h3>CSS</h3>
+            </div>
+            <div class="language-box-back">
+              <div class="language-info active">
+                <p>CSS is a style sheet language used for describing the presentation of a document written in HTML. It adds style and enhances the look of web pages, making them visually appealing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- JavaScript Box -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="language-box" onclick="this.classList.toggle('flipped')">
+            <div class="language-box-front" style="background-color: #D291BC;">
+              <h3>JavaScript</h3>
+            </div>
+            <div class="language-box-back">
+              <div class="language-info active">
+                <p>JavaScript is a programming language that enables interactive web pages. It is widely used for client-side web development and allows dynamic content, animations, and user interactions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Second Line of Languages -->
+      <div class="row">
+        <!-- Python Box -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="language-box" onclick="this.classList.toggle('flipped')">
+            <div class="language-box-front" style="background-color: #9B539C;">
+              <h3>Python</h3>
+            </div>
+            <div class="language-box-back">
+              <div class="language-info active">
+                <p>Python is a high-level programming language known for its simplicity and readability. It is widely used in various domains, including web development, data science, artificial intelligence, and automation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Java Box -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="language-box" onclick="this.classList.toggle('flipped')">
+            <div class="language-box-front" style="background-color: #F399A4;">
+              <h3>Java</h3>
+            </div>
+            <div class="language-box-back">
+              <div class="language-info active">
+                <p>Java is a widely used programming language known for its portability, performance, and security features. It is commonly used in enterprise applications, mobile development, and large-scale systems.</p>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+        <!-- Ruby Box -->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="language-box" onclick="this.classList.toggle('flipped')">
+            <div class="language-box-front" style="background-color: #9B8AA1;">
+              <h3>Ruby</h3>
+            </div>
+            <div class="language-box-back">
+              <div class="language-info active">
+                <p>Ruby is a dynamic, object-oriented programming language known for its simplicity and productivity. It is commonly used for web development, prototyping, and building scalable applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Programming Languages Section -->
+
+ 
+  <!-- ======= Projects Gallery Section ======= -->
+  <section id="projects-gallery" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h3 class="section-title">Projects Gallery</h3>
+        <h4 class="title">Some of our team's projects & ideas using different frameworks & programming languages!</h4>
+      </div>
+      <br/> </br>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Example Project Slide -->
+          <div class="swiper-slide" style="background-image: url('');">
+            <div class="project-info">
+              <h4>JobSeeker Platform</h4>
+              <img src="assets/img/project1.jpg" alt="Project 1 Thumbnail" style="width:100%; height:auto;">
+              <p>JobSeeker Platform is very useful for content around jobs & applying for jobs remotely by one click away</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('');">
+            <div class="project-info">
+              <h4>Airbnb </h4>
+              <img src="assets/img/project2.jpeg" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
+              <p>Airbnb is a popular short-term vacation rental company with hosts and properties all over the world.</p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('');">
+            <div class="project-info">
+              <h4>Walmart </h4>
+              <img src="assets/img/project3.jpeg" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
+              <p>Walmart is a multinational retailer that operates a chain of hypermarkets. </p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('');">
+            <div class="project-info">
+              <h4>ASOS </h4>
+              <img src="assets/img/project4.jpeg" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
+              <p>ASOS is an online fashion and cosmetics retailer.  </p>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('');">
+            <div class="project-info">
+              <h4>Landing Page </h4>
+              <img src="assets/img/project5.png" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
+              <p>Example of a perfect homepage on a website.  </p>
+            </div>
+          </div>
+          <!-- Add more project slides as needed -->
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section><!-- End Projects Gallery Section -->
+
+  <!-- ======= Community Forum Section ======= -->
+  <section id="community-forum" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h3 class="section-title">Community Forum</h3>
+      </div>
+      <div class="forum-container">
+        <!-- Forum content goes here -->
+      </div>
+    </div>
+  </section><!-- End Community Forum Section -->
+</br>
+
+<section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>CodeCrafters</h3>
+      <p>Your footer content goes here.</p>
+    </div>
+  </footer><!-- End Footer -->
+</section>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000, // Delay between slides in milliseconds (5 seconds)
+        disableOnInteraction: false, // Continue autoplay even when user interacts with slider
+      },
+    });
+  </script>
+  
+</body>
+
+</html>

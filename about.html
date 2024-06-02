@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - CodeCrafters</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- Navbar code -->
+  </header>
+
+  <!-- Back to Home Arrow -->
+  <a href="index.html" class="back-to-home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+    </svg>
+  </a>
+
+  <main>
+    <section id="about-us" style="background-image: url('https://img.freepik.com/free-vector/programmer-working-flat-style_52683-16623.jpg?t=st=1717283184~exp=1717286784~hmac=3023b512229942af726c985f00096ca852029f485d2b9aeb1797aa1a8a586a3c&w=740');">
+        <div class="container">
+      <h1>About Us</h1>
+      <div class="about-slider">
+        <!-- Mission Slide -->
+        <div class="about-slide">
+          <div class="icon"><i class="fas fa-rocket"></i></div>
+          <div class="content">
+            <h3>Our Mission</h3>
+            <p>We are on a mission to empower individuals through coding education, fostering creativity, collaboration, and problem-solving skills.</p>
+          </div>
+        </div>
+        <!-- Purpose Slide -->
+        <div class="about-slide">
+          <div class="icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="content">
+            <h3>Our Purpose</h3>
+            <p>Our purpose is to create a vibrant community of coders where learners can thrive, innovate, and contribute to the world of technology.</p>
+          </div>
+        </div>
+        <!-- Add more slides here -->
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+        <div class="icon"><i class="fas fa-laptop-code"></i></div> 
+      <h2>Our Skills</h2>
+      <div class="skills-slider">
+        <!-- Skill Slide 1 -->
+        <style>
+            .skill-slide {
+              position: relative;
+              overflow: hidden;
+            }
+          
+            .content {
+              position: relative;
+              z-index: 1;
+              padding: 20px;
+              background-color: rgba(255, 255, 255, 0.7); /* Background color with opacity */
+            }
+          
+            .animate-right {
+              animation: slideRight 1s forwards;
+            }
+          
+            @keyframes slideRight {
+              from {
+                transform: translateX(-100%);
+                opacity: 0;
+              }
+              to {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
+            @keyframes textHighlight {
+  0% { color: #333; }
+  50% { color: palegreen; }
+  100% { color: #333; }
+}
+
+.about-slide .content p {
+  animation: textHighlight 2s infinite; /* Change the duration and timing as needed */
+}
+/* CSS for animating titles */
+/* CSS for animating titles */
+@keyframes slideIn {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes highlight {
+  0% { color: #000; }
+  50% { color: #ff0; }
+  100% { color: #000; }
+}
+
+.animated-title {
+  animation: slideIn 1s forwards, highlight 2s forwards;
+  transition: color 0.3s ease;
+}
+
+.highlight {
+  color: #000;
+}
+
+          </style>
+          
+       
+          <!-- Skill Slide 1 -->
+<div class="skill-slide" style="background-image: url('');">
+    <div class="content animate-right">
+      <h3 class="animated-title highlight">Web Development</h3>
+      <p>Master the art of building responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+      <img src="https://magenest.com/wp-content/uploads/2021/02/website-development-and-design-1.jpg" style="width: 300px; height: auto;">
+    </div>
+  </div>
+  
+  <!-- Skill Slide 2 -->
+  <div class="skill-slide" style="background-image: url('');">
+    <div class="content animate-right">
+      <h3 class="animated-title highlight">Mobile Development</h3>
+      <p>Learn how to create mobile apps for iOS and Android platforms using popular frameworks like React Native.</p>
+      <img src="https://assets-global.website-files.com/6410ebf8e483b5bb2c86eb27/6410ebf8e483b5758186fbd8_ABM%20college%20mobile%20app%20dev%20main.jpg" style="width: 300px; height: auto;">
+    </div>
+  </div>
+  
+  <!-- Skill Slide 3 -->
+  <div class="skill-slide" style="background-image: url('');">
+    <div class="content animate-right">
+      <h3 class="animated-title highlight">Game Development</h3>
+      <p>Dive into the world of game development and bring your ideas to life with Unity and Unreal Engine.</p>
+      <img src="https://www.codecademy.com/resources/blog/wp-content/uploads/2022/12/102022_Game-development_Break-into-Game-Development_Thumbnail-.png" style="width: 300px; height: auto;">
+    </div>
+  </div>
+  
+  <!-- Skill Slide 4 -->
+  <div class="skill-slide" style="background-image: url('assets/img/skill3.jpg');">
+    <div class="content animate-right">
+      <h3 class="animated-title highlight">Interactive Content</h3>
+      <p>We offer material for CSE students so they'll have it easier to access coding and project ideas.</p>
+      <img src="https://www.healthstream.com/images/default-source/blog/01563546_im_cr_blog-images_608x320_final_artboard-2.png?sfvrsn=4360dd29_0" style="width: 300px; height: auto;">
+    </div>
+  </div>
+  
+        <!-- Add more skill slides here -->
+      </div>
+    </section>
+   
+   <section>
+  
+        <section id="continuous-improvement">
+          <div class="container">
+            <h2>Our Commitment to Continuous Improvement</h2>
+            <p>At CodeCrafters, we are dedicated to constantly improving our services, products, and skills. Here's how we do it:</p>
+            
+            <div class="improvement-methods">
+              <div class="improvement-method">
+                <img src="training.png" alt="Training Programs">
+                <h3>Ongoing Training Programs</h3>
+                <p>We offer regular training programs for our team members to enhance their skills and stay updated with the latest technologies and industry trends.</p>
+              </div>
+              
+              <div class="improvement-method">
+                <img src="feedback.png" alt="Feedback Mechanisms">
+                <h3>Feedback Mechanisms</h3>
+                <p>We actively seek feedback from our clients, partners, and team members to identify areas for improvement and make necessary adjustments to our processes and products.</p>
+              </div>
+              
+              <div class="improvement-method">
+                <img src="research.png" alt="Investment in Research and Development">
+                <h3>Investment in Research and Development</h3>
+                <p>We allocate resources towards research and development initiatives to explore new technologies, innovate solutions, and anticipate future industry trends.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+   
+      <style>
+        /* CSS for Continuous Improvement section */
+#continuous-improvement {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.improvement-methods {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.improvement-method {
+  width: calc(33.33% - 40px);
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.improvement-method img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.improvement-method h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.improvement-method p {
+  font-size: 16px;
+  color: #666;
+}
+
+      </style>
+
+      
+      
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
