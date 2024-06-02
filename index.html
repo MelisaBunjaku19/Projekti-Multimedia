@@ -20,6 +20,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -108,11 +109,11 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#home">Home</a></li>
           <li><a class="nav-link scrollto" href="about.html">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#web-development">Web Development</a></li>
-          <li><a class="nav-link scrollto" href="#mobile-development">Mobile Development</a></li>
-          <li><a class="nav-link scrollto" href="#game-development">Game Development</a></li>
+          <li><a class="nav-link scrollto" href="web.html">Web Development</a></li>
+          <li><a class="nav-link scrollto" href="mobile.html">Mobile Development</a></li>
+          <li><a class="nav-link scrollto" href="game.html">Game Development</a></li>
         
-          <li><a class="nav-link scrollto" href="#community-forum">Community Forum</a></li>
+      
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -289,105 +290,76 @@
 
 </br>
 
-<!-- Features Section -->
-<section id="features" class="section">
-  <div class="container">
-    <h2>Key Features</h2>
-    <div class="row">
-      <!-- Feature 1 -->
-      <div class="col-md-4">
-        <div class="feature">
-          <div class="icon">
-            <!-- Icon or illustration goes here -->
-            <img src="feature1-icon.png" alt="Feature 1 Icon">
-          </div>
-          <h3>Feature 1</h3>
-          <p>Short description of Feature 1.</p>
-        </div>
-      </div>
-      <!-- Feature 2 -->
-      <div class="col-md-4">
-        <div class="feature">
-          <div class="icon">
-            <!-- Icon or illustration goes here -->
-            <img src="feature2-icon.png" alt="Feature 2 Icon">
-          </div>
-          <h3>Feature 2</h3>
-          <p>Short description of Feature 2.</p>
-        </div>
-      </div>
-      <!-- Feature 3 -->
-      <div class="col-md-4">
-        <div class="feature">
-          <div class="icon">
-            <!-- Icon or illustration goes here -->
-            <img src="feature3-icon.png" alt="Feature 3 Icon">
-          </div>
-          <h3>Feature 3</h3>
-          <p>Short description of Feature 3.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Courses or Tutorials Section -->
-<section id="courses" class="section">
-  <div class="container">
-    <h2>Featured Courses</h2>
-    <div class="row">
-      <!-- Course 1 -->
-      <div class="col-md-4">
-        <div class="course">
-          <img src="course1-thumbnail.jpg" alt="Course 1 Thumbnail">
-          <h3>Course 1 Title</h3>
-          <p>Brief description of Course 1.</p>
-        </div>
-      </div>
-      <!-- Course 2 -->
-      <div class="col-md-4">
-        <div class="course">
-          <img src="course2-thumbnail.jpg" alt="Course 2 Thumbnail">
-          <h3>Course 2 Title</h3>
-          <p>Brief description of Course 2.</p>
-        </div>
-      </div>
-      <!-- Course 3 -->
-      <div class="col-md-4">
-        <div class="course">
-          <img src="course3-thumbnail.jpg" alt="Course 3 Thumbnail">
-          <h3>Course 3 Title</h3>
-          <p>Brief description of Course 3.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Add your JavaScript or jQuery link here -->
  <!--Lottie animation of my own choosing-->
 </br>
 <section id="animation-section">
   <div class="container" style="display: flex; justify-content: center; align-items: center;">
-    <dotlottie-player src="https://lottie.host/5006e445-1198-4f72-9f77-132f8cd5d099/5y56iQAe7w.json" background="transparent" speed="1" style="width: 80%; height: 50%; border: none;" loop autoplay></dotlottie-player>
+    <dotlottie-player src="https://lottie.host/5006e445-1198-4f72-9f77-132f8cd5d099/5y56iQAe7w.json" background="transparent" speed="1" style="width: 80%; height: 80%; border: none;" loop autoplay></dotlottie-player>
+  </div>
+</section>
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+<section id="futureGoals" class="section" style="background-image: url('https://www.speexx.com/wp-content/uploads/goal-setting-long-term-goals.jpg');">
+  <div class="container">
+    <h2 class="animated-heading">Future Goals</h2>
+    <p class="animated-text">CodeCrafters' future goals:</p>
+    <ul id="futureGoalsList">
+      <li class="animated-list-item">Continuously innovate and introduce new features and tools.</li>
+      <li class="animated-list-item">Expand its user base and reach new markets.</li>
+      <li class="animated-list-item">Establish partnerships with industry leaders for collaborative projects.</li>
+      <li class="animated-list-item">Provide high-quality educational content to empower aspiring developers.</li>
+    </ul>
   </div>
 </section>
 
 
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 
+
+
+  <script>
+  const futureGoalsList = document.getElementById('futureGoalsList').getElementsByTagName('li');
+
+  let currentIndex = 0;
+
+  document.addEventListener('click', function(event) {
+    if (event.target.closest('#futureGoals')) {
+      revealListItems(futureGoalsList);
+    }
+  });
+
+  function revealListItems(list) {
+    if (currentIndex < list.length) {
+      list[currentIndex].style.opacity = '1';
+      currentIndex++;
+    }
+  }
+</script>
 
 
 </section>
-<section>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>CodeCrafters</h3>
-      <p>Your footer content goes here.</p>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>CodeCrafters</h3>
+        <p>Coding information Website.</p>
+      </div>
+    
+      <div class="col-md-4">
+        <h4>Contact Us</h4>
+        <p>123 Street Name, City, Country</p>
+        <p>Email: info@codecrafters.com</p>
+        <p>Phone: +1234567890</p>
+      </div>
     </div>
-  </footer><!-- End Footer -->
-</section>
+  </div>
+</footer>
+
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

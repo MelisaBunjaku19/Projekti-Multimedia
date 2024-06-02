@@ -1818,3 +1818,270 @@ section {
 .improvement-method:nth-child(even) {
   background-color: #e6e6fa; /* Lavender */
 }
+#website-development {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Height adjusted for better visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('https://img.freepik.com/free-vector/low-code-development-concept-illustration_114360-7294.jpg?t=st=1717342358~exp=1717345958~hmac=011d36e39e83b30391713286cbd09ceb39a192ab109d7b690dccb179662facad&w=826');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white; /* Ensures text is visible on the background */
+}
+
+#website-development h1 {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.video-placeholder iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(128, 128, 128, 0.7);
+  z-index: 5;
+  width: 30px; /* Adjust arrow size */
+  height: 30px; /* Adjust arrow size */
+  background-color: rgba(0, 0, 0, 0.7); /* Arrow background color */
+  border-radius: 50%;
+  padding: 5px; /* Adjust padding */
+}
+
+.carousel-control-prev {
+  left: 0; /* Adjust to move the arrow outside the container */
+}
+
+.carousel-control-next {
+  right: 0; /* Adjust to move the arrow outside the container */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Remove arrow background color */
+}
+
+.carousel-control-prev-icon:before,
+.carousel-control-next-icon:before {
+  color:darkblue; /* Arrow color */
+}
+
+.case-studies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.case-study {
+  width: 300px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.case-study:hover {
+  transform: translateY(-10px);
+}
+
+.case-study img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.case-study-details {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.case-study-details h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.case-study-details p {
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.case-study-details p:last-child {
+  margin-bottom: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Code+Pro:wght@700&display=swap');
+
+.title-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.animated-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    display: inline-block;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#footer h3, #footer h4 {
+  color: #fff;
+}
+
+#footer p {
+  color: #ccc;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+#footer ul li {
+  margin-bottom: 10px;
+}
+
+#footer ul li a {
+  color: #ccc;
+}
+
+#footer ul li a:hover {
+  color: #fff;
+}
+/* Animation for the heading */
+.animated-heading {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animation for the text */
+.animated-text {
+  animation: fadeInUp 1.2s ease forwards;
+  animation-delay: 0.2s; /* Delayed animation */
+}
+
+/* Animation for the list items */
+.animated-list-item {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.4s; /* Delayed animation */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Coding Exercise Section */
+#codingExercise {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.coding-instructions {
+  margin-bottom: 20px;
+}
+
+.coding-instructions p {
+  font-size: 16px;
+  color: #333;
+}
+
+.coding-editor {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  resize: none;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius:100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.feedback {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
