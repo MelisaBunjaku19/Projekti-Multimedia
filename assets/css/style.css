@@ -1707,6 +1707,114 @@ section {
 #about-us{
   color:darkblue;
 }
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.swiper-container {
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-info {
+  max-width: 80%;
+  margin: auto;
+}
+
+.project-info img {
+  max-width: 70%; /* Adjusted to fit within the container */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px; /* Added rounded corners for aesthetic */
+}
+
+.project-info h4 {
+  font-size: 1.4em; /* Increased font size for better visibility */
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 1.1em; /* Increased font size for better visibility */
+  color: #333; /* Darkened text color for better contrast */
+  margin: 0; /* Reset margin for better spacing */
+  text-align: center; /* Center the text */
+  line-height: 1.6; /* Increased line height for better readability */
+  white-space: normal; /* Allow text to wrap */
+  overflow: hidden; /* Hide overflowing text */
+}
 /*about us css*/
 /* Styling for the "Read More" link */
 /* Center the timeline items */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.improvement-method {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.improvement-method img {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.improvement-method:nth-child(odd) {
+  background-color: #d8f3dc; /* Mint */
+}
+
+.improvement-method:nth-child(even) {
+  background-color: #e6e6fa; /* Lavender */
+}

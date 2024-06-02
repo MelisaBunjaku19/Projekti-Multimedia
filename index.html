@@ -223,74 +223,162 @@
   </section><!-- End Programming Languages Section -->
 
  
-  <!-- ======= Projects Gallery Section ======= -->
-  <section id="projects-gallery" class="section-bg">
+<section id="projects-gallery" class="section-bg">
     <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h3 class="section-title">Projects Gallery</h3>
-        <h4 class="title">Some of our team's projects & ideas using different frameworks & programming languages!</h4>
-      </div>
-      <br/> </br>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <!-- Example Project Slide -->
-          <div class="swiper-slide" style="background-image: url('');">
-            <div class="project-info">
-              <h4>JobSeeker Platform</h4>
-              <img src="assets/img/project1.jpg" alt="Project 1 Thumbnail" style="width:100%; height:auto;">
-              <p>JobSeeker Platform is very useful for content around jobs & applying for jobs remotely by one click away</p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('');">
-            <div class="project-info">
-              <h4>Airbnb </h4>
-              <img src="assets/img/project2.jpeg" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
-              <p>Airbnb is a popular short-term vacation rental company with hosts and properties all over the world.</p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('');">
-            <div class="project-info">
-              <h4>Walmart </h4>
-              <img src="assets/img/project3.jpeg" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
-              <p>Walmart is a multinational retailer that operates a chain of hypermarkets. </p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('');">
-            <div class="project-info">
-              <h4>ASOS </h4>
-              <img src="assets/img/project4.jpeg" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
-              <p>ASOS is an online fashion and cosmetics retailer.  </p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('');">
-            <div class="project-info">
-              <h4>Landing Page </h4>
-              <img src="assets/img/project5.png" alt="Project 2 Thumbnail" style="width:100%; height:auto;">
-              <p>Example of a perfect homepage on a website.  </p>
-            </div>
-          </div>
-          <!-- Add more project slides as needed -->
+        <div class="section-header">
+            <h3 class="section-title">Projects Gallery</h3>
+            <h4 class="title">Some of our team's projects & ideas using different frameworks & programming languages!</h4>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
+      </br> </br> </br>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Example Project Slide -->
+                <div class="swiper-slide">
+                    <div class="project-info">
+                        <h4>JobSeeker Platform</h4>
+                        <img src="assets/img/project1.jpg" alt="Project 1 Thumbnail">
+                        <h5>JobSeeker Platform is very useful for content around jobs & applying for jobs remotely by one click away</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-info">
+                        <h4>Airbnb</h4>
+                        <img src="assets/img/project2.jpeg" alt="Project 2 Thumbnail">
+                        <h5>Airbnb is a popular short-term vacation rental company with hosts and properties all over the world.</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-info">
+                        <h4>Walmart</h4>
+                        <img src="assets/img/project3.jpeg" alt="Project 3 Thumbnail">
+                        <h5>Walmart is a multinational retailer that operates a chain of hypermarkets.</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-info">
+                        <h4>ASOS</h4>
+                        <img src="assets/img/project4.jpeg" alt="Project 4 Thumbnail">
+                        <h5>ASOS is an online fashion and cosmetics retailer.</h5>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-info">
+                        <h4>Landing Page</h4>
+                        <img src="assets/img/project5.png" alt="Project 5 Thumbnail">
+                        <h5>Example of a perfect homepage on a website.</h5>
+                    </div>
+                </div>
+                <!-- Add more project slides as needed -->
+            </div>
+        </div>
     </div>
-  </section><!-- End Projects Gallery Section -->
+</section>
 
-  <!-- ======= Community Forum Section ======= -->
-  <section id="community-forum" class="section-bg">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h3 class="section-title">Community Forum</h3>
-      </div>
-      <div class="forum-container">
-        <!-- Forum content goes here -->
-      </div>
-    </div>
-  </section><!-- End Community Forum Section -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000, // 5 seconds
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
 </br>
 
+<!-- Features Section -->
+<section id="features" class="section">
+  <div class="container">
+    <h2>Key Features</h2>
+    <div class="row">
+      <!-- Feature 1 -->
+      <div class="col-md-4">
+        <div class="feature">
+          <div class="icon">
+            <!-- Icon or illustration goes here -->
+            <img src="feature1-icon.png" alt="Feature 1 Icon">
+          </div>
+          <h3>Feature 1</h3>
+          <p>Short description of Feature 1.</p>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-4">
+        <div class="feature">
+          <div class="icon">
+            <!-- Icon or illustration goes here -->
+            <img src="feature2-icon.png" alt="Feature 2 Icon">
+          </div>
+          <h3>Feature 2</h3>
+          <p>Short description of Feature 2.</p>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-4">
+        <div class="feature">
+          <div class="icon">
+            <!-- Icon or illustration goes here -->
+            <img src="feature3-icon.png" alt="Feature 3 Icon">
+          </div>
+          <h3>Feature 3</h3>
+          <p>Short description of Feature 3.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Courses or Tutorials Section -->
+<section id="courses" class="section">
+  <div class="container">
+    <h2>Featured Courses</h2>
+    <div class="row">
+      <!-- Course 1 -->
+      <div class="col-md-4">
+        <div class="course">
+          <img src="course1-thumbnail.jpg" alt="Course 1 Thumbnail">
+          <h3>Course 1 Title</h3>
+          <p>Brief description of Course 1.</p>
+        </div>
+      </div>
+      <!-- Course 2 -->
+      <div class="col-md-4">
+        <div class="course">
+          <img src="course2-thumbnail.jpg" alt="Course 2 Thumbnail">
+          <h3>Course 2 Title</h3>
+          <p>Brief description of Course 2.</p>
+        </div>
+      </div>
+      <!-- Course 3 -->
+      <div class="col-md-4">
+        <div class="course">
+          <img src="course3-thumbnail.jpg" alt="Course 3 Thumbnail">
+          <h3>Course 3 Title</h3>
+          <p>Brief description of Course 3.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add your JavaScript or jQuery link here -->
+ <!--Lottie animation of my own choosing-->
+</br>
+<section id="animation-section">
+  <div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <dotlottie-player src="https://lottie.host/5006e445-1198-4f72-9f77-132f8cd5d099/5y56iQAe7w.json" background="transparent" speed="1" style="width: 80%; height: 50%; border: none;" loop autoplay></dotlottie-player>
+  </div>
+</section>
+
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
+
+
+
+</section>
 <section>
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -309,6 +397,10 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+
+
   
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
