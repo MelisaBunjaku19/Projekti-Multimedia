@@ -301,38 +301,33 @@
   </div>
 </section>
 
+
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 <section id="futureGoals" class="section" style="background-image: url('https://www.speexx.com/wp-content/uploads/goal-setting-long-term-goals.jpg');">
   <div class="container">
     <h2 class="animated-heading">Future Goals</h2>
-    <p class="animated-text">CodeCrafters' future goals:</p>
+    <p class="animated-text" id="futureGoalsText">CodeCrafters' future goals:</p>
     <ul id="futureGoalsList">
-      <li class="animated-list-item">Continuously innovate and introduce new features and tools.</li>
-      <li class="animated-list-item">Expand its user base and reach new markets.</li>
-      <li class="animated-list-item">Establish partnerships with industry leaders for collaborative projects.</li>
-      <li class="animated-list-item">Provide high-quality educational content to empower aspiring developers.</li>
+      <li class="animated-list-item" style="opacity: 0;">Continuously innovate and introduce new features and tools.</li>
+      <li class="animated-list-item" style="opacity: 0;">Expand its user base and reach new markets.</li>
+      <li class="animated-list-item" style="opacity: 0;">Establish partnerships with industry leaders for collaborative projects.</li>
+      <li class="animated-list-item" style="opacity: 0;">Provide high-quality educational content to empower aspiring developers.</li>
     </ul>
   </div>
 </section>
 
-
-
-
-
-  <script>
+<script>
+  const futureGoalsText = document.getElementById('futureGoalsText');
   const futureGoalsList = document.getElementById('futureGoalsList').getElementsByTagName('li');
-
   let currentIndex = 0;
 
-  document.addEventListener('click', function(event) {
-    if (event.target.closest('#futureGoals')) {
-      revealListItems(futureGoalsList);
-    }
+  futureGoalsText.addEventListener('click', function(event) {
+    revealListItem();
   });
 
-  function revealListItems(list) {
-    if (currentIndex < list.length) {
-      list[currentIndex].style.opacity = '1';
+  function revealListItem() {
+    if (currentIndex < futureGoalsList.length) {
+      futureGoalsList[currentIndex].style.opacity = '1';
       currentIndex++;
     }
   }

@@ -9,32 +9,236 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- Include DotLottie Player script -->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: relative;
+      background-image: url('assets/img/5794866.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0; /* Adjusted padding */
+      text-align: center;
+      color: black;
+    }
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    main {
+      padding: 50px 0;
+    }
+    section {
+      padding: 50px 0;
+      text-align: center;
+    }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .animation-container {
+      display: inline-block;
+      width: 300px; /* Adjust the width as needed */
+      height: 300px; /* Adjust the height as needed */
+      margin-right: 20px; /* Adjust the margin between animations */
+    }
+    .animation-container:last-child {
+      width: 500px; /* Width of the third animation */
+      height: 500px; /* Height of the third animation */
+    }
+  </style>
+    <!-- Back to Home Arrow -->
+    <a href="index.html" class="back-to-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+      </a>
+    
 </head>
 <body>
   <header>
-    <!-- Navbar code -->
+    <h1>Mobile Development</h1>
   </header>
 
-  <!-- Back to Home Arrow -->
-  <a href="index.html" class="back-to-home">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M0 0h24v24H0z" fill="none"/>
-      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-    </svg>
-  </a>
-
   <main>
-    <section id="about-us" style="background-image: url('https://img.freepik.com/free-vector/programmer-working-flat-style_52683-16623.jpg?t=st=1717283184~exp=1717286784~hmac=3023b512229942af726c985f00096ca852029f485d2b9aeb1797aa1a8a586a3c&w=740');">
-        <div class="container">
-          <h1>Mobile Development</h1>
-          <p>We specialize in mobile development, creating cutting-edge applications for various platforms.</p>
-          <p>Our team of skilled developers is dedicated to delivering high-quality solutions tailored to meet our clients' needs.</p>
-          <p>With a focus on innovation and user experience, we strive to bring our clients' visions to life through intuitive and powerful mobile applications.</p>
+    <section id="lottie-section">
+     <!-- First Lottie Animation -->
+     <div class="animation-container">
+        <dotlottie-player src="https://lottie.host/78adee2e-07e4-4a50-97df-728d8fc45167/orJ5kCiKvv.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+      </div>
+    
+      <!-- Second Lottie Animation -->
+      <div class="animation-container">
+        <dotlottie-player src="https://lottie.host/1f1f57a8-bb5c-49cf-a9f6-33147875b50c/E7CRzqtuGP.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+      </div>
+    
+      <!-- Third Lottie Animation -->
+      <div class="animation-container">
+        <dotlottie-player src="https://lottie.host/3f7fe1de-37e8-47ea-9567-f5cc84fa9e78/F7kMFMbWLB.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+      </div>
+
+
+<section>
+    
+      <div id="tutorialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="video-placeholder">
+                  <iframe src="assets/video/mobile1.mp4" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="video-placeholder">
+                  <iframe src="assets/video/mobile2 (3).mp4" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="video-placeholder">
+                  <iframe src="https://www.youtube.com/embed/D7PG_GBnf-g" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
+
+
+
+<section id="ui-ux-design">
+    <h2>UI/UX Design</h2>
+    <div class="service-group">
+      <div class="service">
+        <i class="fas fa-paint-brush service-icon"></i>
+        <h3 class="service-title">Wireframing & Prototyping</h3>
+        <p class="service-description">Create wireframes and interactive prototypes to visualize app interfaces and user flows.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-mobile-alt service-icon"></i>
+        <h3 class="service-title">User-Centric Design</h3>
+        <p class="service-description">Design intuitive and visually appealing user interfaces to enhance user experience.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-check-circle service-icon"></i>
+        <h3 class="service-title">Usability Testing</h3>
+        <p class="service-description">Conduct usability tests to evaluate app usability and identify areas for improvement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="backend-development">
+    <h2>Backend Development</h2>
+    <div class="service-group">
+      <div class="service">
+        <i class="fas fa-server service-icon"></i>
+        <h3 class="service-title">API Development</h3>
+        <p class="service-description">Build robust APIs to support mobile app functionalities and data exchange.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-database service-icon"></i>
+        <h3 class="service-title">Data Storage</h3>
+        <p class="service-description">Implement secure and scalable data storage solutions for app data management.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-sync service-icon"></i>
+        <h3 class="service-title">Real-time Updates</h3>
+        <p class="service-description">Enable real-time data synchronization and updates for seamless user experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cloud-integration">
+    <h2>Cloud Integration</h2>
+    <div class="service-group">
+      <div class="service">
+        <i class="fas fa-cloud service-icon"></i>
+        <h3 class="service-title">Cloud Hosting</h3>
+        <p class="service-description">Leverage cloud platforms for hosting app backends, data storage, and infrastructure scaling.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-users-cog service-icon"></i>
+        <h3 class="service-title">User Authentication</h3>
+        <p class="service-description">Implement secure user authentication mechanisms using cloud-based authentication services.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-chart-line service-icon"></i>
+        <h3 class="service-title">Scalability</h3>
+        <p class="service-description">Scale app infrastructure based on demand to ensure optimal performance and availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Function to show services after a delay
+    function showServices() {
+      const services = document.querySelectorAll('.service');
+      services.forEach((service, index) => {
+        setTimeout(() => {
+          service.classList.add('visible');
+        }, index * 1000); // Delay each service by 1 second
+      });
+    }
+
+    // Show services when the page loads
+    window.onload = showServices;
+  </script>
+
+      <section id="mobile-app-security">
+        <h2>Mobile App Security</h2>
+        <div class="service-container">
+          <div class="step" style="height: auto;">
+            <h3>Data Encryption</h3>
+            <p>Encrypt sensitive data stored locally or transmitted over the network to prevent unauthorized access or unwanted access.</p>
+            <img src="https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37343.jpg?t=st=1717366695~exp=1717370295~hmac=5b6b6c85b17529dc39698146179dca28f1e81d030e20db67135079d8ae337a70&w=740" alt="Data Encryption">
+          </div>
+          <div class="step">
+            <h3>Authentication Mechanisms</h3>
+            <p>Implement strong authentication mechanisms such as biometric authentication or multi-factor authentication.</p>
+            <img src="https://img.freepik.com/free-vector/cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37328.jpg?t=st=1717366691~exp=1717370291~hmac=c80572d8474082fcbab3c61e6ce7d9d79b4172701c51fa7c3aa1088ae80e04d6&w=740" alt="Authentication Mechanisms">
+          </div>
+          <div class="step">
+            <h3>Regular Security Updates</h3>
+            <p>Regularly update the app with security patches and fixes to address vulnerabilities and protect against emerging threats.</p>
+            <img src="https://img.freepik.com/free-vector/hand-drawn-vpn-illustration_23-2149229495.jpg?t=st=1717366880~exp=1717370480~hmac=ca69761b7a5c17773c8080349af68a4adc205392284603ff152def819cf3ab38&w=740" alt="Regular Security Updates">
+          </div>
         </div>
-    </section>
+      </section>
   </main>
-
-  <!-- Your scripts and additional HTML content here -->
-
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>CodeCrafters</h3>
+          <p>Coding information Website.</p>
+        </div>
+      
+        <div class="col-md-4">
+          <h4>Contact Us</h4>
+          <p>123 Street Name, City, Country</p>
+          <p>Email: info@codecrafters.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
 </body>
 </html>
