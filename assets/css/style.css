@@ -647,34 +647,41 @@ h6 {
 #footer ul li a:hover {
   color: #fff;
 }
-/* Animation for the heading */
+.section-future {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+.container-future {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
 .animated-heading {
-  animation: fadeInUp 1s ease forwards;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2em;
 }
-
-/* Animation for the text */
 .animated-text {
-  animation: fadeInUp 1.2s ease forwards;
-  animation-delay: 0.2s; /* Delayed animation */
+  font-size: 1.2em;
+  color: #666;
+  cursor: pointer;
 }
-
-/* Animation for the list items */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 .animated-list-item {
+  font-size: 1.1em;
+  color: #444;
+  margin: 10px 0;
   opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.4s; /* Delayed animation */
-}
-
-/* Keyframes for fade-in animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transition: opacity 0.5s;
 }
 
 /* Coding Exercise Section CSS */
@@ -683,59 +690,64 @@ h6 {
   text-align: center;
 }
 
-.coding-instructions {
-  margin-bottom: 20px;
-}
-
 .coding-instructions p {
-  font-size: 16px;
-  color: #333;
+  font-weight: bold;
 }
-
-.coding-editor {
-  margin-bottom: 20px;
-}
-
-label {
+.coding-editor label {
   display: block;
-  font-size: 18px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
-
-textarea {
+.coding-editor textarea {
   width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 15px;
-  background-color: #f0f0f0;
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  resize: none;
-  outline: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 100px;
 }
-
-button {
-  padding: 10px 20px;
-  background-color: teal;
+.coding-editor button {
+  background-color: #28a745;
   color: white;
   border: none;
-  border-radius:100px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 14px;
+  margin-top: 10px;
 }
-
-button:hover {
-  background-color: #0056b3;
+.coding-editor button:hover {
+  background-color: #218838;
 }
-
 .feedback {
-  font-size: 18px;
+  margin-top: 10px;
+  font-size: 16px;
   font-weight: bold;
-  margin-top: 20px;
+}
+.feedback.correct {
+  color: green;
+}
+.feedback.incorrect {
+  color: red;
 }
 
+#codeInput1{
+  border-radius:10px;
+}
+#codeInput2{
+  border-radius:10px;
+}
+
+.container-code {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-image:url('https://img.freepik.com/premium-vector/programmer-working-concept-flat-design-illustration-people-characters-landing-page_9209-4905.jpg?w=826');
+}
 /*back to home button css */
 .back-to-home {
   position: absolute;
@@ -797,3 +809,5 @@ button:hover {
 .service-description {
   font-size: 16px;
 }
+
+

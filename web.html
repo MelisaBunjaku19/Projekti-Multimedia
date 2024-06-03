@@ -108,7 +108,7 @@
         </div>
       </div>
     </section>
-
+  </br> </br>
  <!-- Case Studies Section -->
  <div class="title-section">
     <h5 class="animated-title">Important things to understand around web development</h5>
@@ -151,52 +151,84 @@
         </div>
     </div>
 </section>
-<section id="codingExercise" class="section">
-    <div class="container">
-        <h2>Coding Exercise</h2>
-        <div class="coding-instructions">
-            <p><strong>Instructions:</strong> Write HTML/CSS code to create a button with a red background and white text.</p>
-        </div>
-        <div class="coding-editor">
-            <label for="codeInput">Your Code:</label>
-            <textarea id="codeInput" rows="6" cols="50" placeholder="Enter your code here..."></textarea>
-            <button id="submitBtn">Submit</button>
-        </div>
-        <div id="feedback" class="feedback">
-            <!-- Feedback message will appear here -->
-        </div>
-    </div>
+<section id="codingExercise1" class="section">
+  <div class="container-code">
+      <h2>Coding Exercise 1</h2>
+      <div class="coding-instructions">
+          <p><strong>Instructions:</strong> Write HTML/CSS code to create a button with a red background and white text.</p>
+      </div>
+      <div class="coding-editor">
+          <label for="codeInput1">Your Code:</label>
+          <textarea id="codeInput1" rows="6" cols="50" placeholder="Enter your code here..."></textarea>
+          <button id="submitBtn1">Submit</button>
+      </div>
+      <div id="feedback1" class="feedback">
+          <!-- Feedback message will appear here -->
+      </div>
+  </div>
+</section>
+</br> </br>
+
+<section id="codingExercise2" class="section-future">
+  <div class="container-code">
+      <h2>Coding Exercise 2</h2>
+      <div class="coding-instructions">
+          <p><strong>Instructions:</strong> Write CSS code to style a paragraph with a blue background and yellow text.</p>
+      </div>
+      <div class="coding-editor">
+          <label for="codeInput2">Your Code:</label>
+          <textarea id="codeInput2" rows="6" cols="50" placeholder="Enter your code here..."></textarea>
+          <button id="submitBtn2">Submit</button>
+      </div>
+      <div id="feedback2" class="feedback">
+          <!-- Feedback message will appear here -->
+      </div>
+  </div>
 </section>
 
 <script>
-    document.getElementById('submitBtn').addEventListener('click', function() {
-          var code = document.getElementById('codeInput').value;
-          // Check code for correctness
-          var isCorrect = checkCode(code);
-          // Display feedback message
-          var feedback = document.getElementById('feedback');
-          if (isCorrect) {
-              feedback.textContent = 'Correct!';
-              playAudio('assets/audio/correct-156911.mp3');
-          } else {
-              feedback.textContent = 'Incorrect. Please try again.';
-              playAudio('assets/audio/wronganswer-37702.mp3');
-          }
-      });
-   
-      function checkCode(code) {
-          // Expected answer
-          var expectedAnswer = '<button style="background-color: red; color: white;">Click me</button>';
-          // Check if submitted code matches expected answer
-          return code.trim() === expectedAnswer.trim();
+  document.getElementById('submitBtn1').addEventListener('click', function() {
+      var code = document.getElementById('codeInput1').value;
+      var isCorrect = checkCode1(code);
+      var feedback = document.getElementById('feedback1');
+      if (isCorrect) {
+          feedback.textContent = 'Correct!';
+          playAudio('assets/audio/correct-156911.mp3');
+      } else {
+          feedback.textContent = 'Incorrect. Please try again.';
+          playAudio('assets/audio/wronganswer-37702.mp3');
       }
-  
-      function playAudio(audioFile) {
-          var audio = new Audio(audioFile);
-          audio.play();
+  });
+
+  document.getElementById('submitBtn2').addEventListener('click', function() {
+      var code = document.getElementById('codeInput2').value;
+      var isCorrect = checkCode2(code);
+      var feedback = document.getElementById('feedback2');
+      if (isCorrect) {
+          feedback.textContent = 'Correct!';
+          playAudio('assets/audio/correct-156911.mp3');
+      } else {
+          feedback.textContent = 'Incorrect. Please try again.';
+          playAudio('assets/audio/wronganswer-37702.mp3');
       }
-  </script>
-  
+  });
+
+  function checkCode1(code) {
+      var expectedAnswer = '<button style="background-color: red; color: white;">Click me</button>';
+      return code.trim() === expectedAnswer.trim();
+  }
+ 
+  function checkCode2(code) {
+        var expectedAnswer = 'p { background-color: blue; color: yellow; }';
+        return code.trim() === expectedAnswer.trim();
+    }
+
+  function playAudio(audioFile) {
+      var audio = new Audio(audioFile);
+      audio.play();
+  }
+</script>
+
     </main>
   
     <footer id="footer">
