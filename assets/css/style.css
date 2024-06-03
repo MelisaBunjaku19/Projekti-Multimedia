@@ -257,7 +257,7 @@ h6 {
 
 /* Background for the "Welcome to CodeCrafters" section */
 #home {
-  background-image: url('https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg?w=740&t=st=1717277182~exp=1717277782~hmac=9686da2494578734a6ab24e0773b90fbc065b2517555d86e7b45a5cc90539cb5');
+  background-image: url('../img/index.jpg');
   background-size: cover;
   background-position: center;
   padding: 300px; /* Adjust the padding as needed */
@@ -476,7 +476,7 @@ h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('https://img.freepik.com/free-vector/low-code-development-concept-illustration_114360-7294.jpg?t=st=1717342358~exp=1717345958~hmac=011d36e39e83b30391713286cbd09ceb39a192ab109d7b690dccb179662facad&w=826');
+  background-image: url('../img/web.jpg');
   background-size: cover; /* Ensures the image covers the entire section */
   background-repeat: no-repeat;
   background-position: center;
@@ -810,4 +810,21 @@ ul {
   font-size: 16px;
 }
 
+/*GAME DEVELOPMENT PART*/
 
+.game-development-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url('../img/game2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
