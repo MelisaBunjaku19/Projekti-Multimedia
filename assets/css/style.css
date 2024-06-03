@@ -743,10 +743,10 @@ ul {
 .container-code {
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-image:url('https://img.freepik.com/premium-vector/programmer-working-concept-flat-design-illustration-people-characters-landing-page_9209-4905.jpg?w=826');
+
+  padding: 50px;
+  margin-bottom: 30px;
+  background-image:url('../img/coding.jpg');
 }
 /*back to home button css */
 .back-to-home {
