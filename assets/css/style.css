@@ -1045,3 +1045,290 @@ canvas {
   width: 600px; /* Adjust width as needed */
   height: 300px; /* Adjust height as needed */
 }
+
+.container-genre {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+.category {
+  margin-bottom: 40px;
+}
+.category h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #555;
+}
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.videos video {
+  max-width: 30%;
+  flex: 1 1 calc(33% - 20px);
+}
+.interactive-section {
+  text-align: center;
+  padding: 50px 20px;
+  background:white;
+}
+.interactive-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.interactive-description {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+.animation-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.animated-box {
+  width: 200px;
+  height: 200px;
+  background: #3498db;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.animated-box:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+.animated-box::before, .animated-box::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:white;
+  transition: transform 0.5s ease-in-out;
+}
+.animated-box::before {
+  transform: scale(1.5) rotate(45deg);
+}
+.animated-box::after {
+  transform: scale(0.5) rotate(-45deg);
+}
+.animated-box:hover::before {
+  transform: scale(0.5) rotate(45deg);
+}
+.animated-box:hover::after {
+  transform: scale(1.5) rotate(-45deg);
+}
+.graphic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+.animated-box:hover .graphic {
+  opacity: 0.8;
+}
+.graphic img {
+  width: 80%;
+  height: auto;
+}
+/* General styles */
+.tools-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.tools-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.tools-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.tools-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tool {
+  width: 30%;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.tool img {
+  width: 100%;
+  display: block;
+}
+
+.tool-description {
+  padding: 20px;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.tool-description h3 {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
+}
+
+.more-info {
+  opacity: 0; /* Hide the additional info by default */
+  transition: opacity 0.3s ease;
+}
+
+.tool:hover .more-info {
+  opacity: 1; /* Show the additional info on hover */
+}
+
+.tool:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.tool {
+  animation: fadeInUp 0.5s forwards;
+}
+
+@media (max-width: 768px) {
+  .tool {
+      width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool {
+      width: 100%;
+  }
+}
+
+.custom-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.custom-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.custom-slide img {
+  max-width: 500px; /* Adjust as needed */
+  height: auto;
+  margin-left: 20px; /* Increase margin for more distance */
+}
+
+.custom-slide h2, .custom-slide p {
+  text-align: left;
+}
+
+
+/*pixi js design for a game*/
+#game-design-canvas-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#game-design-canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  border: 2px solid black;
+}
+
+/* General Section Styles */
+/* General Section Styles */
+.best-games-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Slider Styles */
+.game-slider {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 400px; /* Adjust as needed */
+}
+
+.game-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.game-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Adjust the image to fit within the container */
+}
+
+/* Game Title Styles */
+.game-title {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Visible Slide */
+.game-slide.visible {
+  opacity: 1;
+}

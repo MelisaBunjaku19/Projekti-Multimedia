@@ -28,7 +28,7 @@
             <h1 class="game-title">Game Development</h1>
           </header>
           <section id="introduction">
-            <h1 class="intro-title">Introduction to Gaming Concepts</h1>
+              <div class="section-title">Introduction to Gaming Concepts</div>
             <div class="slider">
               <div class="slide" id="slide-1">
                 <div class="slide-content">
@@ -208,52 +208,349 @@
     }
         </script>
         
-
-        <section id="types-of-games">
-          <h2>Types of Games</h2>
-          <p>Discover various genres of games, each offering unique experiences:</p>
-          <ul>
-              <li>Action Games</li>
-              <li>Adventure Games</li>
-              <li>Puzzle Games</li>
-              <li>Strategy Games</li>
-              <!-- Add more genres as needed -->
-          </ul>
       </section>
-      <section id="graphics-and-animations">
-        <h2>Interactive Graphics and Animations</h2>
-        <p>Experience the magic of game development with interactive graphics and animations:</p>
-        <!-- Showcase your PixiJS, Three.js, or WebGL animations here -->
-    </section>
+      <section class="container-genre">
+        <div class="section-title">Types of Gaming Genres</div>
+        <!-- Adventure Games -->
+        <div class="category">
+          <h3>Adventure Games</h3>
+          <div class="videos">
+            <video src="assets/video/video7.mp4" controls></video>
+            <video src="assets/video/video8.mp4" controls></video>
+            <video src="assets/video/video9.mp4" controls></video>
+          </div>
+        </div>
+        <!-- Puzzle Games -->
+        <div class="category">
+          <h3>Puzzle Games</h3>
+          <div class="videos">
+            <video src="assets/video/video10.mp4" controls></video>
+            <video src="assets/video/video11.mp4" controls></video>
+            <video src="assets/video/video12.mp4" controls></video>
+          </div>
+        </div>
+        <div class="category">
+          <h3>Action Games</h3>
+          <div class="videos">
+            <video src="assets/video/video13.mp4" controls></video>
+            <video src="assets/video/video14.mp4" controls></video>
+            <video src="assets/video/video15.mp4" controls></video>
+          </div>
+        </div>
+        <div class="category">
+          <h3>Strategy Games</h3>
+          <div class="videos">
+            <video src="assets/video/video16.mp4" controls></video>
+            <video src="assets/video/video17.mp4" controls></video>
+            <video src="assets/video/video18.mp4" controls></video>
+          </div>
+        </div>
+      </section>
+
+      <section class="interactive-section" id="interactive-animations">
+        <h2 class="interactive-title">Interactive Graphics & Animations</h2>
+        <p class="interactive-description">Experience the magic of game development with interactive graphics and animations:</p>
+        <div class="animation-wrapper">
+          <div class="animated-box">
+            <div class="graphic">
+              <img src="assets/img/game-controller.jpg" alt="Game Controller">
+            </div>
+          </div>
+          <div class="animated-box">
+            <div class="graphic">
+              <img src="https://img.freepik.com/free-vector/man-playing-online-games-concept_52683-37362.jpg?t=st=1717764430~exp=1717768030~hmac=42d9461ab98dfafa1642199748b6eaabeff38da5eee9bfa77f8a4d0c174100f8&w=740" alt="Game Development">
+            </div>
+          </div>
+          <div class="animated-box">
+            <div class="graphic">
+              <img src="https://img.freepik.com/free-vector/gradient-gamification-illustration_23-2149247168.jpg?t=st=1717764557~exp=1717768157~hmac=861ba4f38959b0b0d5fcb7db61869025dd20bcdd1130da0eee87505207e04dda&w=826" alt="Game Goals">
+            </div>
+          </div>
+          <div class="animated-box">
+            <div class="graphic">
+              <img src="https://img.freepik.com/free-vector/action-game-abstract-concept-illustration_335657-3751.jpg?t=st=1717764668~exp=1717768268~hmac=fb7715b0f6f8db59ce4e6748d193a87a8dca5773d8aac6510e895a2acb10504b&w=740" alt="Game Interaction">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="tools-section" id="tools-technologies">
+        <h2 class="tools-title">Tools and Technologies</h2>
+        <p class="tools-description">Learn about the essential tools and technologies used in game development:</p>
+        <div class="tools-wrapper">
+          <div class="tool" id="game-engines">
+            <div class="tool-description">
+              <h3>Game Engines</h3>
+              <p>Unity, Unreal Engine, Godot</p>
+              <div class="more-info">
+                <p>Game engines provide the framework for building games. Unity is known for its versatility and is widely used for both 2D and 3D game development. Unreal Engine offers high-fidelity graphics and is popular in AAA game development. Godot is open-source and highly customizable, making it a great choice for indie developers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tool" id="programming-languages">
+            <div class="tool-description">
+              <h3>Programming Languages</h3>
+              <p>C#, C++, JavaScript</p>
+              <div class="more-info">
+                <p>C# is primarily used with Unity for its simplicity and efficiency. C++ is used with Unreal Engine due to its high performance and control over system resources. JavaScript is often used for web-based games and game development frameworks like Phaser.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tool" id="graphics-tools">
+            <div class="tool-description">
+              <h3>Graphics Tools</h3>
+              <p>Blender, Maya, Photoshop</p>
+              <div class="more-info">
+                <p>Blender is a free and open-source tool for creating 3D models and animations. Maya is a professional-grade tool used in the film and game industry for complex 3D modeling and animation. Photoshop is widely used for creating textures, concept art, and other 2D assets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const tools = document.querySelectorAll('.tool');
+
+  // Add entrance animation for each tool
+  tools.forEach((tool, index) => {
+    setTimeout(() => {
+      tool.style.opacity = '1';
+      tool.style.transform = 'translateY(0)';
+    }, index * 100); // Stagger the entrance animations
+  });
+
+  // Handle hover effects
+  tools.forEach(tool => {
+    tool.addEventListener('mouseover', () => {
+      tool.querySelector('.tool-description').style.opacity = '1';
+    });
     
-    <section id="tools-and-technologies">
-      <h2>Tools and Technologies</h2>
-      <p>Learn about the essential tools and technologies used in game development:</p>
-      <ul>
-          <li>Game Engines: Unity, Unreal Engine, Godot</li>
-          <li>Programming Languages: C#, C++, JavaScript</li>
-          <li>Graphics Tools: Blender, Maya, Photoshop</li>
-          <!-- Add more tools and technologies as needed -->
-      </ul>
-  </section>
-  <section id="development-process">
-    <h2>Game Development Process</h2>
-    <p>Explore the step-by-step process of creating a game:</p>
-    <ol>
-        <li>Idea Generation and Concept</li>
-        <li>Game Design and Planning</li>
-        <li>Development and Programming</li>
-        <li>Testing and Debugging</li>
-        <li>Deployment and Release</li>
-    </ol>
+    tool.addEventListener('mouseout', () => {
+      tool.querySelector('.tool-description').style.opacity = '0';
+    });
+  });
+});
+
+      </script>
+      
+      
+      <div class="custom-slider" id="custom-slider">
+        <div class="custom-slide">
+            <img src="assets/img/image-idea.jpg" alt="Idea Generation and Concept">
+            <div>
+                <h2>Idea Generation and Concept</h2>
+                <p>Explore various methods for generating game ideas and turning them into concepts.</p>
+            </div>
+        </div>
+        <div class="custom-slide">
+            <img src="assets/img/image-game.jpg" alt="Game Design and Planning">
+            <div>
+                <h2>Game Design and Planning</h2>
+                <p>Learn about the principles of game design and how to plan the development process.</p>
+            </div>
+        </div>
+        <div class="custom-slide">
+            <img src="assets/img/image-programming.jpg" alt="Development and Programming">
+            <div>
+                <h2>Development and Programming</h2>
+                <p>Discover the coding and programming aspects involved in game development.</p>
+            </div>
+        </div>
+        <div class="custom-slide">
+            <img src="assets/img/image-testing.jpg" alt="Testing and Debugging">
+            <div>
+                <h2>Testing and Debugging</h2>
+                <p>Understand the importance of testing and debugging in ensuring a smooth gaming experience.</p>
+            </div>
+        </div>
+        <div class="custom-slide">
+            <img src="https://img.freepik.com/premium-photo/software-deployment-integration_810293-5507.jpg?w=740" alt="Deployment and Release">
+            <div>
+                <h2>Deployment and Release</h2>
+                <p>Learn about the final steps of deploying and releasing a game to the market.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+<script>
+  const customSlider = document.getElementById('custom-slider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  customSlider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - customSlider.offsetLeft;
+    scrollLeft = customSlider.scrollLeft;
+  });
+
+  customSlider.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  customSlider.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  customSlider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - customSlider.offsetLeft;
+    const walk = (x - startX) * 3; // Adjust scrolling speed
+    customSlider.scrollLeft = scrollLeft - walk;
+  });
+</script>
+
+<section id="game-design-canvas-section">
+  <h2>Game Development Visual Using Pixi Js! </h2>
+  <div id="game-design-canvas-container"></div>
 </section>
-<section id="resources-and-tutorials">
-  <h2>Resources and Tutorials</h2>
-  <p>Enhance your game development skills with these useful resources and tutorials:</p>
-  <ul>
-      <li>Online Courses: Udemy, Coursera, Khan Academy</li>
-      <li>Tutorial Websites: Unity Learn, GameDev.net, Gamasutra</li>
-      <li>Communities: Stack Overflow, Reddit, Discord</li>
-      <!-- Add more resources and tutorials as needed -->
-  </ul>
-</section>
+<script src="https://pixijs.download/v5.3.10/pixi.min.js"></script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    // Create PixiJS application
+    const app = new PIXI.Application({
+        width: 600,
+        height: 300,
+        backgroundColor: 0xffffff,
+    });
+    document.getElementById('game-design-canvas-container').appendChild(app.view);
+
+    // Draw game controller body
+    const controller = new PIXI.Graphics();
+    controller.beginFill(0x999999);
+    controller.drawRoundedRect(150, 50, 300, 200, 20);
+    controller.endFill();
+
+    // Draw D-pad
+    controller.beginFill(0x000000);
+    controller.drawRect(180, 110, 20, 80); // Vertical
+    controller.drawRect(160, 130, 60, 20); // Horizontal
+    controller.endFill();
+
+    // Draw left analog stick
+    controller.lineStyle(4, 0x000000, 1);
+    controller.beginFill(0x888888);
+    controller.drawCircle(240, 150, 25);
+    controller.endFill();
+
+    // Draw right analog stick
+    controller.lineStyle(4, 0x000000, 1);
+    controller.beginFill(0x888888);
+    controller.drawCircle(360, 150, 25);
+    controller.endFill();
+
+    // Draw action buttons (A, B, X, Y)
+    controller.beginFill(0xff0000);
+    controller.drawCircle(420, 120, 15); // B button
+    controller.endFill();
+    controller.beginFill(0x00ff00);
+    controller.drawCircle(450, 150, 15); // A button
+    controller.endFill();
+    controller.beginFill(0x0000ff);
+    controller.drawCircle(390, 150, 15); // X button
+    controller.endFill();
+    controller.beginFill(0xffff00);
+    controller.drawCircle(420, 180, 15); // Y button
+    controller.endFill();
+
+    // Draw start and select buttons
+    controller.beginFill(0x000000);
+    controller.drawRoundedRect(280, 90, 40, 20, 5); // Start button
+    controller.drawRoundedRect(280, 190, 40, 20, 5); // Select button
+    controller.endFill();
+
+    app.stage.addChild(controller);
+});
+
+
+</script>
+
+<section class="best-games-section" id="best-games">
+        <h2 class="section-title">Best Games</h2>
+        <div class="game-slider">
+            <div class="game-slide" data-title="SoulCaliber">
+                <img src="https://www.metacritic.com/a/img/catalog/provider/6/3/6-1-7379-13.jpg" alt="Game 1">
+            </div>
+            <div class="game-slide" data-title="Uncharted">
+                <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-106618-52.jpg" alt="Game 2">
+            </div>
+            <div class="game-slide" data-title="Super Mario">
+                <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-595365-52.jpg" alt="Game 3">
+            </div>
+         
+          <div class="game-slide" data-title="Golden Eye 007">
+            <img src="https://assets-prd.ignimgs.com/2021/12/06/goldeneye-rare-1638823499676.jpg" alt="Game 3">
+        </div>
+        <div class="game-slide" data-title="Marvel's Spiderman">
+          <img src="https://assetsio.gnwcdn.com/Marvel's-Spider-Man-2-(1).jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp" alt="Game 3">
+      </div>
+      <div class="game-slide" data-title="Metroid Prime">
+        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000063709/32b85837beea0eee31220a59e247219662de4011f7a8c18fce61cf99a4933eb7" alt="Game 3">
+    </div>
+    <div class="game-slide" data-title="Geometry Rush">
+      <img src="https://avatars.mds.yandex.net/get-games/2977039/2a00000187fcca735b7e51b48513b8a4284d/orig" alt="Game 3">
+  </div>
+        </div>
+        <div class="game-title" id="game-title"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.game-slide');
+    const title = document.getElementById('game-title');
+    let currentIndex = 0;
+
+    // Preload images
+    slides.forEach(slide => {
+        const img = new Image();
+        img.src = slide.querySelector('img').src;
+    });
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('visible');
+                title.textContent = slide.getAttribute('data-title');
+            } else {
+                slide.classList.remove('visible');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
+</script>
+
+</main>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>CodeCrafters</h3>
+        <p>Coding information Website.</p>
+      </div>
+    
+      <div class="col-md-4">
+        <h4>Contact Us</h4>
+        <p>123 10000, Prishtine, Kosova</p>
+        <p>Email: info@codecrafters.com</p>
+        <p>Phone: +1234567890</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
+  
