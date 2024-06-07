@@ -9,7 +9,8 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <!-- Include DotLottie Player script -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <style>
     body {
@@ -18,10 +19,10 @@
     }
     header {
       position: relative;
-      background-image: url('assets/img/5794866.jpg');
+      background-image: url('https://assets-global.website-files.com/6410ebf8e483b5bb2c86eb27/6410ebf8e483b5758186fbd8_ABM%20college%20mobile%20app%20dev%20main.jpg');
       background-size: cover;
       background-position: center;
-      padding: 150px 0; /* Adjusted padding */
+      padding: 225px ; /* Adjusted padding */
       text-align: center;
       color: black;
     }
@@ -75,7 +76,7 @@
 </head>
 <body>
   <header>
-    <h1>Mobile Development</h1>
+    <h1 class="mobile-title">Mobile Development</h1>
   </header>
 
   <main>
@@ -201,27 +202,106 @@
     // Show services when the page loads
     window.onload = showServices;
   </script>
-
-      <section id="mobile-app-security">
-        <h2>Mobile App Security</h2>
-        <div class="service-container">
-          <div class="step" style="height: auto;">
-            <h3>Data Encryption</h3>
-            <p>Encrypt sensitive data stored locally or transmitted over the network to prevent unauthorized access or unwanted access.</p>
-            <img src="https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37343.jpg?t=st=1717366695~exp=1717370295~hmac=5b6b6c85b17529dc39698146179dca28f1e81d030e20db67135079d8ae337a70&w=740" alt="Data Encryption">
+      <section id="mobile-app-testing">
+        <h2>Mobile App Testing</h2>
+        <div class="service-group">
+          <div class="service">
+            <i class="fas fa-bug service-icon"></i>
+            <h3 class="service-title">Automated Testing</h3>
+            <p class="service-description">Implement automated testing to ensure app functionality and performance across different devices.</p>
           </div>
-          <div class="step">
-            <h3>Authentication Mechanisms</h3>
-            <p>Implement strong authentication mechanisms such as biometric authentication or multi-factor authentication.</p>
-            <img src="https://img.freepik.com/free-vector/cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37328.jpg?t=st=1717366691~exp=1717370291~hmac=c80572d8474082fcbab3c61e6ce7d9d79b4172701c51fa7c3aa1088ae80e04d6&w=740" alt="Authentication Mechanisms">
+          <div class="service">
+            <i class="fas fa-mobile-alt service-icon"></i>
+            <h3 class="service-title">Manual Testing</h3>
+            <p class="service-description">Conduct manual testing to identify and fix bugs and ensure a smooth user experience.</p>
           </div>
-          <div class="step">
-            <h3>Regular Security Updates</h3>
-            <p>Regularly update the app with security patches and fixes to address vulnerabilities and protect against emerging threats.</p>
-            <img src="https://img.freepik.com/free-vector/hand-drawn-vpn-illustration_23-2149229495.jpg?t=st=1717366880~exp=1717370480~hmac=ca69761b7a5c17773c8080349af68a4adc205392284603ff152def819cf3ab38&w=740" alt="Regular Security Updates">
+          <div class="service">
+            <i class="fas fa-check service-icon"></i>
+            <h3 class="service-title">Usability Testing</h3>
+            <p class="service-description">Perform usability testing to evaluate the app's user interface and user experience.</p>
           </div>
         </div>
       </section>
+      <script>
+        // Function to add the 'visible' class when the section is in view
+        function revealSection() {
+          const section = document.getElementById('mobile-app-testing');
+          const sectionPosition = section.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+      
+          if (sectionPosition < screenPosition) {
+            section.classList.add('visible');
+          }
+        }
+      
+        // Add event listener to trigger the function when scrolling
+        window.addEventListener('scroll', revealSection);
+      </script>
+
+<section id="mobile-app-security">
+  <h2>Mobile App Security</h2>
+  <div class="service-container">
+    <div class="step">
+      <h3 class="step-title" onclick="toggleContent(this)">Data Encryption</h3>
+      <div class="step-content">
+        <p>Encrypt sensitive data stored locally or transmitted over the network to prevent unauthorized access or unwanted access.</p>
+        <img src="https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37343.jpg?t=st=1717366695~exp=1717370295~hmac=5b6b6c85b17529dc39698146179dca28f1e81d030e20db67135079d8ae337a70&w=740" alt="Data Encryption">
+      </div>
+    </div>
+    <div class="step">
+      <h3 class="step-title" onclick="toggleContent(this)">Authentication Mechanisms</h3>
+      <div class="step-content">
+        <p>Implement strong authentication mechanisms such as biometric authentication or multi-factor authentication.</p>
+        <img src="https://img.freepik.com/free-vector/cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37328.jpg?t=st=1717366691~exp=1717370291~hmac=c80572d8474082fcbab3c61e6ce7d9d79b4172701c51fa7c3aa1088ae80e04d6&w=740" alt="Authentication Mechanisms">
+      </div>
+    </div>
+    <div class="step">
+      <h3 class="step-title" onclick="toggleContent(this)">Regular Security Updates</h3>
+      <div class="step-content">
+        <p>Regularly update the app with security patches and fixes to address vulnerabilities and protect against emerging threats.</p>
+        <img src="https://img.freepik.com/free-vector/hand-drawn-vpn-illustration_23-2149229495.jpg?t=st=1717366880~exp=1717370480~hmac=ca69761b7a5c17773c8080349af68a4adc205392284603ff152def819cf3ab38&w=740" alt="Regular Security Updates">
+      </div>
+    </div>
+  </div>
+</section>
+
+      <style>
+      .step-content {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.step-content.show {
+  display: block;
+  opacity: 1;
+  max-height: 1000px; /* Large enough value to show the content */
+}
+
+.step-title {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif; /* Example Google Font */
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+    </style>
+    <script>
+    // Function to add the 'animate' class when the bottom of the page is reached
+ // Function to add the 'animate' class when the bottom of the page is reached
+ function toggleContent(element) {
+  const content = element.nextElementSibling;
+  content.classList.toggle('show');
+}
+
+
+// Add event listener to trigger the function when scrolling
+window.addEventListener('scroll', animateOnScroll);
+
+    </script>
+      
   </main>
   <footer id="footer">
     <div class="container">

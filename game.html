@@ -24,9 +24,236 @@
         </a>
       
         <main>
-          <section id="game-development">
-            <h1>Game Development</h1>
+          <header>
+            <h1 class="game-title">Game Development</h1>
+          </header>
+          <section id="introduction">
+            <h1 class="intro-title">Introduction to Gaming Concepts</h1>
+            <div class="slider">
+              <div class="slide" id="slide-1">
+                <div class="slide-content">
+                  <h2>Easter Eggs</h2>
+                  <img src="https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto/v1649868005/content-items/011/093/273/BLOG_sm%2520%25281%2529-original.png?1649868005" alt="Game Design">
+               
+                
+              
+                </div>
+              </div>
+              <div class="slide" id="slide-2">
+                <div class="slide-content">
+                  <h2>Speedrunning</h2>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/SuperTux_Frosted_Fields_speedrun.webm/800px--SuperTux_Frosted_Fields_speedrun.webm.jpg">
+                   
+                 
+                 
+                </div>
+              </div>
+              <div class="slide" id="slide-3">
+                <div class="slide-content">
+                  <h2>Procedural Generation</h2>
+                  <img src="https://cdn.80.lv/api/upload/post/1235/images/5d289e4959a2f/widen_1220x0.jpg">
+                 
+                
+                </div>
+              </div>
+              <div class="slide" id="slide-4">
+                <div class="slide-content">
+                  <h2>Sound Design</h2>
+                  <img src="https://static.voices.com/wp-content/uploads/2018/11/MR-2846-how-video-game-designers-can-mak.jpg" alt="Sound Design">
+                 
+                </div>
+              </div>
+              <div class="slide" id="slide-5">
+                <div class="slide-content">
+                  <h2>Local Co-op</h2>
+                  <img src="https://cdn.vox-cdn.com/thumbor/yQjJDvZaE_g1aemlR-wXw8DEcpY=/0x0:3840x2160/1200x0/filters:focal(0x0:3840x2160):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23176385/NSTW_Overworld_scenery.jpg" alt="Testing">
+               
+
+                
+                 
+                </div>
+              </div>
+              <div class="slide" id="slide-6">
+                <div class="slide-content">
+                  <h2>Game Design</h2>
+                 <canvas id="canvas-2"></canvas>
+                </div>
+              </div>
+              <div class="slide" id="slide-7">
+                <div class="slide-content" id="slide-7">
+                    <h2>Programming</h2>
+                    <canvas id="canvas-1"></canvas>
+                </div>
+            </div>
+            <div class="navigation">
+              <button class="nav-button" id="prev-button">Previous</button>
+              <button class="nav-button" id="next-button">Next</button>
+            </div>
           </section>
-        </main>
-      
-      </body>
+          <script src="https://pixijs.download/v5.3.10/pixi.min.js"></script>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.style.display = 'block';
+            if (i === 0) { // If it's the Programming slide
+              drawProgrammingShapes();
+            } else if (i === 1) { // If it's the Game Design slide
+              drawGameDesignShapes();
+            }
+          } else {
+            slide.style.display = 'none';
+          }
+        });
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      document.getElementById('prev-button').addEventListener('click', prevSlide);
+      document.getElementById('next-button').addEventListener('click', nextSlide);
+
+      showSlide(currentIndex);
+    });
+
+    function drawProgrammingShapes() {
+      const canvas = document.getElementById('canvas-1');
+      const ctx = canvas.getContext('2d'); // Get the 2D rendering context
+
+      // Draw a code editor
+      ctx.fillStyle = '#2C3E50'; // Set background color
+      ctx.fillRect(0, 0, canvas.width, canvas.height); // Draw background
+
+      // Draw code lines
+      ctx.fillStyle = '#FFFFFF'; // Set text color
+      ctx.font = '14px Arial'; // Set font
+      for (let i = 1; i <= 10; i++) {
+        ctx.fillText(`Line ${i}`, 10, 20 * i); // Draw code line
+      }
+
+      // Draw cursor
+      ctx.fillStyle = '#FFFFFF'; // Set cursor color
+      ctx.fillRect(90, 20, 2, 15); // Draw cursor
+    }
+
+    function drawGameDesignShapes() {
+      const canvas = document.getElementById('canvas-2');
+      const ctx = canvas.getContext('2d'); // Get the 2D rendering context
+
+      // Clear the canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Calculate center of canvas
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+
+      // Adjust these values to center the controller properly
+      const controllerWidth = 300;
+      const controllerHeight = 100;
+      const controllerX = centerX - controllerWidth / 2;
+      const controllerY = centerY - controllerHeight / 2;
+
+      // Draw the main body of the controller
+      ctx.fillStyle = 'gray';
+      ctx.fillRect(controllerX, controllerY, controllerWidth, controllerHeight);
+
+      // Draw buttons on the right
+      ctx.fillStyle = 'black';
+      ctx.beginPath();
+      ctx.arc(controllerX + 230, controllerY + 50, 10, 0, Math.PI * 2); // Button 1
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(controllerX + 260, controllerY + 30, 10, 0, Math.PI * 2); // Button 2
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(controllerX + 260, controllerY + 70, 10, 0, Math.PI * 2); // Button 3
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(controllerX + 290, controllerY + 50, 10, 0, Math.PI * 2); // Button 4
+      ctx.fill();
+
+      // Draw D-pad on the left
+      ctx.fillStyle = 'black';
+      ctx.fillRect(controllerX + 40, controllerY + 40, 20, 40); // Vertical
+      ctx.fillRect(controllerX + 25, controllerY + 55, 50, 20); // Horizontal
+
+      // Draw analog sticks
+      ctx.beginPath();
+      ctx.arc(controllerX + 100, controllerY + 50, 25, 0, Math.PI * 2); // Left analog stick
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(controllerX + 200, controllerY + 50, 25, 0, Math.PI * 2); // Right analog stick
+      ctx.stroke();
+
+      // Draw start and select buttons
+      ctx.fillStyle = 'black';
+      ctx.fillRect(controllerX + 145, controllerY + 20, 20, 10); // Start button
+      ctx.fillRect(controllerX + 145, controllerY + 70, 20, 10); // Select button
+    }
+        </script>
+        
+
+        <section id="types-of-games">
+          <h2>Types of Games</h2>
+          <p>Discover various genres of games, each offering unique experiences:</p>
+          <ul>
+              <li>Action Games</li>
+              <li>Adventure Games</li>
+              <li>Puzzle Games</li>
+              <li>Strategy Games</li>
+              <!-- Add more genres as needed -->
+          </ul>
+      </section>
+      <section id="graphics-and-animations">
+        <h2>Interactive Graphics and Animations</h2>
+        <p>Experience the magic of game development with interactive graphics and animations:</p>
+        <!-- Showcase your PixiJS, Three.js, or WebGL animations here -->
+    </section>
+    
+    <section id="tools-and-technologies">
+      <h2>Tools and Technologies</h2>
+      <p>Learn about the essential tools and technologies used in game development:</p>
+      <ul>
+          <li>Game Engines: Unity, Unreal Engine, Godot</li>
+          <li>Programming Languages: C#, C++, JavaScript</li>
+          <li>Graphics Tools: Blender, Maya, Photoshop</li>
+          <!-- Add more tools and technologies as needed -->
+      </ul>
+  </section>
+  <section id="development-process">
+    <h2>Game Development Process</h2>
+    <p>Explore the step-by-step process of creating a game:</p>
+    <ol>
+        <li>Idea Generation and Concept</li>
+        <li>Game Design and Planning</li>
+        <li>Development and Programming</li>
+        <li>Testing and Debugging</li>
+        <li>Deployment and Release</li>
+    </ol>
+</section>
+<section id="resources-and-tutorials">
+  <h2>Resources and Tutorials</h2>
+  <p>Enhance your game development skills with these useful resources and tutorials:</p>
+  <ul>
+      <li>Online Courses: Udemy, Coursera, Khan Academy</li>
+      <li>Tutorial Websites: Unity Learn, GameDev.net, Gamasutra</li>
+      <li>Communities: Stack Overflow, Reddit, Discord</li>
+      <!-- Add more resources and tutorials as needed -->
+  </ul>
+</section>

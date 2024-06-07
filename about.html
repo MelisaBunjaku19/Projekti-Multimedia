@@ -23,7 +23,7 @@
   <main>
     <section id="about-us" style="background-image: url('assets/img/2620034.jpg');">
         <div class="container">
-      <h1>About Us</h1>
+      <h1 class="about-title">About Us</h1>
       <div class="about-slider">
         <!-- Mission Slide -->
         <div class="about-slide">
@@ -52,6 +52,18 @@
       <div class="skills-slider">
         <!-- Skill Slide 1 -->
         <style>
+          #about-us {
+  background-image: url('assets/img/2620034.jpg');
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding:160px;
+}
+
+.container {
+  position: relative; /* Ensure the container is positioned relative to the section */
+  z-index: 1; /* Ensure the container appears above the background image */
+}
             .skill-slide {
               position: relative;
               overflow: hidden;

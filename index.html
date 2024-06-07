@@ -129,6 +129,8 @@
     </div>
   </section><!-- End Home Section -->
 
+  
+  
   <!-- ======= Programming Languages Section ======= -->
   <section id="programming-languages" class="section-bg">
     <div class="container" data-aos="fade-up">
@@ -281,7 +283,7 @@
         slidesPerView: 1,
         spaceBetween: 30,
         autoplay: {
-            delay: 5000, // 5 seconds
+            delay: 3000, // 5 seconds
             disableOnInteraction: false,
         },
         loop: true,
@@ -373,19 +375,16 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 5000, // Delay between slides in milliseconds (5 seconds)
-        disableOnInteraction: false, // Continue autoplay even when user interacts with slider
-      },
-    });
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+});
+
   </script>
   
 </body>

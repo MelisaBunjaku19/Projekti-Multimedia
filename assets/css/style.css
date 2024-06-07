@@ -406,7 +406,7 @@ h6 {
   overflow: hidden; /* Hide overflowing text */
 }
 /*about us css*/
-/* Styling for the "Read More" link */
+
 /* Center the timeline items */
 .container {
   width: 80%;
@@ -491,6 +491,38 @@ h6 {
   border-radius: 10px;
 }
 
+/* General carousel styling */
+/* General carousel styling */
+h1, p {
+  margin: 0;
+  padding: 10px 0;
+}
+.carousel {
+  margin-top: 10px; /* Adjust this value as needed */
+}
+.mt-5 {
+  margin-top: 20px;
+}
+.container {
+  padding: 20px;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+  width: 100%;
+  transition: transform 0.6s ease;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
 .video-placeholder {
   width: 100%;
   height: 0;
@@ -506,41 +538,34 @@ h6 {
   left: 0;
   top: 0;
   border: none;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(128, 128, 128, 0.7);
-  z-index: 5;
-  width: 30px; /* Adjust arrow size */
-  height: 30px; /* Adjust arrow size */
-  background-color: rgba(0, 0, 0, 0.7); /* Arrow background color */
-  border-radius: 50%;
-  padding: 5px; /* Adjust padding */
+}/* Arrow Button Styles */
+/* Arrow Button Styles */
+/* Arrow Button Styles */
+/* Arrow Button Styles */
+.arrow-slider {
+  font-size: 1.5em; /* Adjust the font size as needed */
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent; /* Remove the background color */
+  border: none;
+  padding: 8px; /* Adjust the padding as needed */
+  box-shadow: none; /* Remove the box shadow */
 }
 
 .carousel-control-prev {
-  left: 0; /* Adjust to move the arrow outside the container */
+  position: absolute;
+  left: 0; /* Position the previous button */
+  margin-left: 10px; /* Adjust the margin to position the previous button outside */
 }
 
 .carousel-control-next {
-  right: 0; /* Adjust to move the arrow outside the container */
+  position: absolute;
+  right: 0; /* Position the next button */
+  margin-right: 10px; /* Adjust the margin to position the next button outside */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 100%;
-  height: 100%;
-  background-color: transparent; /* Remove arrow background color */
-}
 
-.carousel-control-prev-icon:before,
-.carousel-control-next-icon:before {
-  color:white; /* Arrow color */
-}
+
 
 .case-studies {
   display: flex;
@@ -780,51 +805,243 @@ ul {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
-/*three sections components css*/
+
+/* Three sections components css */
 .service-group {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap; /* Allow services to wrap to the next line */
 }
+
 .service {
+  flex: 1 0 300px;
+  margin: 10px;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #6ab04c; /* Soft Green */
+  border-radius: 10px;
   text-align: center;
-  margin: 20px;
-  opacity: 0; /* Initially hide the services */
-  transition: opacity 0.5s ease-in-out; 
-  
-    background-color: #6ab04c; /* Soft Green */
- 
+  background-image: none; /* Remove any background image */
 }
+
+
+
 .visible {
   opacity: 1; /* Make services visible */
 }
+
 .service-icon {
   font-size: 48px;
   margin-bottom: 10px;
 }
+
 .service-title {
   font-size: 24px;
   margin-bottom: 10px;
 }
+
 .service-description {
   font-size: 16px;
 }
 
-/*GAME DEVELOPMENT PART*/
 
-.game-development-page {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  color: white;
+/*GAME DEVELOPMENT PART*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /*for header*/
+header {
+  background-image: url('https://cdn.techjuice.pk/wp-content/uploads/2022/01/WhatsApp-Image-2022-01-25-at-2.26.27-PM-1024x512.jpeg');
+  background-size: cover; /* Ensure the background image covers the entire header */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+  padding:300px; /* Increase padding to create more space around the image */
+}
+
+.game-title {
+  font-family: 'Press Start 2P', cursive; /* Apply Google Font */
+  font-size: 3em; /* Adjust font size */
+  margin: 0; /* Remove default margin */
+  animation: fadeIn 1.5s ease-in-out; /* Apply animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*mobile title*/
+.mobile-title {
+  font-family: 'Press Start 2P', cursive; /* Apply Google Font */
+  font-size: 3em; /* Adjust font size */
+  margin: 0; /* Remove default margin */
+  animation: fadeIn 1.5s ease-in-out; /* Apply animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*web-title*/
+.web-title {
+  font-family: 'Press Start 2P', cursive; /* Apply Google Font */
+  font-size: 3em; /* Adjust font size */
+  margin: 0; /* Remove default margin */
+  animation: fadeIn 1.5s ease-in-out; /* Apply animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/*about us title*/
+.about-title {
+  font-family: 'Press Start 2P', cursive; /* Apply Google Font */
+  font-size: 3em; /* Adjust font size */
+  margin: 0; /* Remove default margin */
+  animation: fadeIn 1.5s ease-in-out; /* Apply animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* Mobile App Testing Section */
+#mobile-app-testing {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#mobile-app-testing.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* General styles for services */
+.service-group {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+}
+
+/* Triggering the animation when the section is in view */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*game slider*/
+#introduction {
   position: relative;
-  background-image: url('../img/game2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.intro-title {
+  margin-bottom: 20px; /* Adjust the distance as needed */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 50vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide-content h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  color: #6ab04c;
+}
+
+.slide-content p {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  z-index: 10;
+}
+
+.nav-button {
+  background: #6ab04c;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background: #4a8a37;
+}
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 600px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
 }
