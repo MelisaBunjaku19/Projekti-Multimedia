@@ -7,6 +7,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.2/pixi.min.js"></script>
   <!-- Font Awesome CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -374,7 +375,7 @@
         </div>
     </div>
     
-    
+
 
 <script>
   const customSlider = document.getElementById('custom-slider');
@@ -409,7 +410,7 @@
   <h2>Game Development Visual Using Pixi Js! </h2>
   <div id="game-design-canvas-container"></div>
 </section>
-<script src="https://pixijs.download/v5.3.10/pixi.min.js"></script>
+
 
 <script>
  document.addEventListener('DOMContentLoaded', () => {
@@ -472,66 +473,307 @@
 </script>
 
 <section class="best-games-section" id="best-games">
-        <h2 class="section-title">Best Games</h2>
-        <div class="game-slider">
-            <div class="game-slide" data-title="SoulCaliber">
-                <img src="https://www.metacritic.com/a/img/catalog/provider/6/3/6-1-7379-13.jpg" alt="Game 1">
-            </div>
-            <div class="game-slide" data-title="Uncharted">
-                <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-106618-52.jpg" alt="Game 2">
-            </div>
-            <div class="game-slide" data-title="Super Mario">
-                <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-595365-52.jpg" alt="Game 3">
-            </div>
-         
-          <div class="game-slide" data-title="Golden Eye 007">
+    <h2 class="section-title">Best Games</h2>
+    <div class="game-slider">
+        <div class="game-slide" data-title="SoulCaliber">
+            <img src="https://www.metacritic.com/a/img/catalog/provider/6/3/6-1-7379-13.jpg" alt="Game 1">
+        </div>
+        <div class="game-slide" data-title="Uncharted">
+            <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-106618-52.jpg" alt="Game 2">
+        </div>
+        <div class="game-slide" data-title="Super Mario">
+            <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-595365-52.jpg" alt="Game 3">
+        </div>
+     
+        <div class="game-slide" data-title="Golden Eye 007">
             <img src="https://assets-prd.ignimgs.com/2021/12/06/goldeneye-rare-1638823499676.jpg" alt="Game 3">
         </div>
         <div class="game-slide" data-title="Marvel's Spiderman">
-          <img src="https://assetsio.gnwcdn.com/Marvel's-Spider-Man-2-(1).jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp" alt="Game 3">
-      </div>
-      <div class="game-slide" data-title="Metroid Prime">
-        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000063709/32b85837beea0eee31220a59e247219662de4011f7a8c18fce61cf99a4933eb7" alt="Game 3">
-    </div>
-    <div class="game-slide" data-title="Geometry Rush">
-      <img src="https://avatars.mds.yandex.net/get-games/2977039/2a00000187fcca735b7e51b48513b8a4284d/orig" alt="Game 3">
-  </div>
+            <img src="https://assetsio.gnwcdn.com/Marvel's-Spider-Man-2-(1).jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp" alt="Game 3">
         </div>
-        <div class="game-title2" id="game-title2"></div>
-    </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.game-slide');
-    const title = document.getElementById('game-title2');
-    let currentIndex = 0;
+        <div class="game-slide" data-title="Metroid Prime">
+            <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000063709/32b85837beea0eee31220a59e247219662de4011f7a8c18fce61cf99a4933eb7" alt="Game 3">
+        </div>
+        <div class="game-slide" data-title="Geometry Rush">
+            <img src="https://avatars.mds.yandex.net/get-games/2977039/2a00000187fcca735b7e51b48513b8a4284d/orig" alt="Game 3">
+        </div>
+    </div>
+    <div class="game-title2" id="game-title2"></div>
+</section>
 
-    // Preload images
-    slides.forEach(slide => {
-        const img = new Image();
-        img.src = slide.querySelector('img').src;
-    });
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.game-slide');
+        const title = document.getElementById('game-title2');
+        let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('visible');
-                title.textContent = slide.getAttribute('data-title');
-            } else {
-                slide.classList.remove('visible');
-            }
+        // Preload images
+        slides.forEach(slide => {
+            const img = new Image();
+            img.src = slide.querySelector('img').src;
         });
-    }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('visible');
+                    title.textContent = slide.getAttribute('data-title');
+                } else {
+                    slide.classList.remove('visible');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
         showSlide(currentIndex);
-    }
-
-    showSlide(currentIndex);
-    setInterval(nextSlide, 3000); // Change slide every 3 seconds
-});
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    });
 </script>
 
+<main>
+  <section id="maze-game-section">
+    <h2 style="text-align: center;">Simple Games Developed by our Programmers :)</h2>
+    <div id="left-game" style="float: left; width: 50%;"></div>
+    <div id="right-game" style="float: right; width: 50%;"></div>
+  </section>
+  
+</main>
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mazeGameSection = document.getElementById('maze-game-section');
+
+            // Create a new PixiJS application
+            const app = new PIXI.Application({ 
+                width: window.innerWidth, 
+                height: window.innerHeight,
+                antialias: true, 
+                backgroundColor: 0x1099bb
+            });
+            mazeGameSection.appendChild(app.view);
+
+            // Generate random cat image
+            const catTexture = generateCatTexture();
+            
+            // Generate random coin image
+            const coinTexture = generateCoinTexture();
+
+            // Create cat sprite
+            const cat = new PIXI.Sprite(catTexture);
+            cat.anchor.set(0.5);
+            cat.scale.set(0.5);
+            app.stage.addChild(cat);
+
+            // Position the cat at the center of the screen
+            cat.x = app.screen.width / 2;
+            cat.y = app.screen.height / 2;
+
+            // Create coins
+            const coins = [];
+            const numCoins = 10;
+            for (let i = 0; i < numCoins; i++) {
+                const coin = new PIXI.Sprite(coinTexture);
+                coin.anchor.set(0.5);
+                coin.scale.set(0.3);
+                coin.x = Math.random() * app.screen.width;
+                coin.y = Math.random() * app.screen.height;
+                app.stage.addChild(coin);
+                coins.push(coin);
+            }
+
+            // Update cat position on each frame
+            app.ticker.add(() => {
+                // Move the cat towards the mouse position
+                const dx = app.renderer.plugins.interaction.mouse.global.x - cat.x;
+                const dy = app.renderer.plugins.interaction.mouse.global.y - cat.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance > 5) {
+                    cat.x += dx / distance * 5;
+                    cat.y += dy / distance * 5;
+                }
+
+                // Check for collisions with coins
+                for (const coin of coins) {
+                    if (coin.visible && hitTestRectangle(cat, coin)) {
+                        app.stage.removeChild(coin);
+                        coins.splice(coins.indexOf(coin), 1);
+                    }
+                }
+
+                // Check if all coins are collected
+                if (coins.length === 0) {
+                    endGame();
+                }
+            });
+
+            // Function to check collision between two sprites
+            function hitTestRectangle(sprite1, sprite2) {
+                const hitArea1 = sprite1.getBounds();
+                const hitArea2 = sprite2.getBounds();
+                return hitArea1.x + hitArea1.width > hitArea2.x &&
+                    hitArea1.x < hitArea2.x + hitArea2.width &&
+                    hitArea1.y + hitArea1.height > hitArea2.y &&
+                    hitArea1.y < hitArea2.y + hitArea2.height;
+            }
+
+            // Function to generate random cat texture
+            function generateCatTexture() {
+                const cat = new PIXI.Graphics();
+                cat.beginFill(0xff00ff);
+                cat.drawCircle(0, 0, 50);
+                cat.endFill();
+                const texture = app.renderer.generateTexture(cat);
+                return texture;
+            }
+
+            // Function to generate random coin texture
+            function generateCoinTexture() {
+                const coin = new PIXI.Graphics();
+                coin.beginFill(0xffff00);
+                coin.drawCircle(0, 0, 20);
+                coin.endFill();
+                const texture = app.renderer.generateTexture(coin);
+                return texture;
+            }
+
+            // Function to end the game
+            function endGame() {
+                const endText = new PIXI.Text('END', { fontSize: 48, fill: 0xffffff });
+                endText.anchor.set(0.5);
+                endText.x = app.screen.width / 2;
+                endText.y = app.screen.height / 2;
+                app.stage.addChild(endText);
+                app.ticker.stop();
+            }
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+        const rightGameContainer = document.getElementById('right-game');
+
+        // Create a new PixiJS application for the right game
+        const app = new PIXI.Application({ 
+            width: 800, 
+            height: 600,
+            antialias: true, 
+            backgroundColor: 0x1099bb
+        });
+        rightGameContainer.appendChild(app.view);
+
+        // Define maze data (0 for empty, 1 for wall, 2 for endpoint)
+        const mazeData = [
+            [1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 1, 0, 1, 0, 1, 1],
+            [1, 0, 1, 0, 1, 0, 0, 1],
+            [1, 0, 0, 0, 1, 1, 2, 1], // Endpoint marked as 2
+            [1, 1, 1, 1, 1, 1, 1, 1]
+        ];
+
+        // Define maze cell size
+        const cellSize = 80;
+
+        // Draw maze
+        const mazeGraphics = new PIXI.Graphics();
+        mazeGraphics.lineStyle(2, 0xffffff);
+        for (let y = 0; y < mazeData.length; y++) {
+            for (let x = 0; x < mazeData[y].length; x++) {
+                if (mazeData[y][x] === 1) {
+                    mazeGraphics.beginFill(0x000000); // Solid wall
+                    mazeGraphics.drawRect(x * cellSize, y * cellSize, cellSize, cellSize);
+                    mazeGraphics.endFill();
+                } else if (mazeData[y][x] === 2) {
+                    // Mark the endpoint
+                    mazeGraphics.beginFill(0xFF0000); // Red color for endpoint
+                    mazeGraphics.drawRect(x * cellSize, y * cellSize, cellSize, cellSize);
+                    mazeGraphics.endFill();
+                }
+            }
+        }
+        app.stage.addChild(mazeGraphics);
+
+        // Load bunny texture
+        PIXI.Loader.shared.add('bunny', 'https://pixijs.com/assets/bunny.png');
+        PIXI.Loader.shared.load(setup);
+
+        function setup() {
+            const bunnyTexture = PIXI.Loader.shared.resources.bunny.texture;
+
+            // Create bunny sprite
+            const bunny = new PIXI.Sprite(bunnyTexture);
+            bunny.anchor.set(0.5);
+            bunny.scale.set(1.5); // Make bunny bigger
+            bunny.x = 100;
+            bunny.y = 100;
+            app.stage.addChild(bunny);
+
+            // Set up keyboard event listeners
+            const leftKey = 37;
+            const upKey = 38;
+            const rightKey = 39;
+            const downKey = 40;
+
+            const keyState = {};
+            window.addEventListener('keydown', (e) => {
+                if (document.activeElement.tagName !== 'INPUT') { // Prevent scrolling when input is focused
+                    keyState[e.keyCode] = true;
+                    e.preventDefault(); // Prevent default arrow key behavior
+                }
+            });
+
+            window.addEventListener('keyup', (e) => {
+                keyState[e.keyCode] = false;
+            });
+
+            // Game loop
+            app.ticker.add(() => {
+                if (keyState[leftKey] && canMove(bunny.x - 5, bunny.y)) {
+                    bunny.x -= 5;
+                }
+                if (keyState[rightKey] && canMove(bunny.x + 5, bunny.y)) {
+                    bunny.x += 5;
+                }
+                if (keyState[upKey] && canMove(bunny.x, bunny.y - 5)) {
+                    bunny.y -= 5;
+                }
+                if (keyState[downKey] && canMove(bunny.x, bunny.y + 5)) {
+                    bunny.y += 5;
+                }
+
+                // Check if bunny reaches the endpoint
+                const row = Math.floor(bunny.y / cellSize);
+                const col = Math.floor(bunny.x / cellSize);
+                if (mazeData[row] && mazeData[row][col] === 2) {
+                    endGame();
+                }
+            });
+        }
+
+        // Function to check if bunny can move to the given position
+        function canMove(x, y) {
+            const row = Math.floor(y / cellSize);
+            const col = Math.floor(x / cellSize);
+            return mazeData[row] && mazeData[row][col] !== 1; // Cannot move through walls
+        }
+
+        // Function to end the game
+        function endGame() {
+            const congratsText = new PIXI.Text('Congratulations!', { fontSize: 48, fill: 0xffffff });
+            congratsText.anchor.set(0.5);
+            congratsText.x = app.screen.width / 2;
+            congratsText.y = app.screen.height / 2;
+            app.stage.addChild(congratsText);
+
+            // Optionally, add animation or sound effects here
+        }
+    });
+    </script>
+
+
+
+</body>
 </main>
 <footer id="footer">
   <div class="container">

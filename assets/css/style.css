@@ -710,7 +710,7 @@ ul {
 }
 
 /* Coding Exercise Section CSS */
-#codingExercise {
+#codingExercise1, #codingExercise2 {
   padding: 50px 0;
   text-align: center;
 }
@@ -718,11 +718,13 @@ ul {
 .coding-instructions p {
   font-weight: bold;
 }
+
 .coding-editor label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
 .coding-editor textarea {
   width: 100%;
   border: 1px solid #ddd;
@@ -733,6 +735,7 @@ ul {
   resize: vertical;
   min-height: 100px;
 }
+
 .coding-editor button {
   background-color: #28a745;
   color: white;
@@ -743,27 +746,36 @@ ul {
   font-size: 14px;
   margin-top: 10px;
 }
+
 .coding-editor button:hover {
   background-color: #218838;
 }
+
 .feedback {
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
-}
-.feedback.correct {
-  color: green;
-}
-.feedback.incorrect {
-  color: red;
+  color: white; /* Default color */
 }
 
-#codeInput1{
-  border-radius:10px;
+.feedback.correct {
+  color: white !important;
+  background-color: green;
 }
-#codeInput2{
-  border-radius:10px;
+
+.feedback.incorrect {
+  color: white !important;
+  background-color: red;
 }
+
+#codeInput1 {
+  border-radius: 10px;
+}
+
+#codeInput2 {
+  border-radius: 10px;
+}
+
 
 .container-code {
   background: white;
@@ -1331,4 +1343,13 @@ canvas {
 /* Visible Slide */
 .game-slide.visible {
   opacity: 1;
+}
+#game-canvas {
+  width: 800px;
+  height: 600px;
+}
+
+#maze-game-section {
+  text-align: center;
+  font-size: 36px;
 }
