@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CodeCrafters</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <body class="contact-us-page">
+
+        <!-- Back to Home Arrow -->
+        <a href="index.html" class="back-to-home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
+        <style>
+            /* Add background image to the body */
+            body {
+              background-image: url('./assets/img/contact\ \(2\).jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 100%;
+            }
+          </style>
+      
+  <!-- Additional Content -->
+  <section id="contact-info" class="contact-info-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <p>Rruga Arberia<br>Prishtine, Kosova, 10000</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-item">
+            <i class="fas fa-phone-alt fa-2x"></i>
+            <p>+383 44783087</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-item">
+            <i class="fas fa-envelope fa-2x"></i>
+            <p>contact@codecrafters.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Contact Section -->
+ <section id="contact" class="contact-section">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="contact-container rounded p-4" style="background-color: rgba(255, 255, 255, 0.7);">
+            <h2 class="section-heading text-center mb-4">Contact Us</h2>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name..">
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name..">
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="form-control">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                  <option value="kosova">Kosova</option>
+                  <option value="albania">Albania</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" class="form-control" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <div id="success" class="mt-3"></div> <!-- Added success id here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // prevent default form submission
+    
+        // Display success message
+        var successMessage = document.createElement("div");
+        successMessage.classList.add("alert", "alert-success");
+        successMessage.setAttribute("role", "alert");
+        successMessage.textContent = "You have successfully contacted us.";
+    
+        // Append success message
+        document.getElementById("success").innerHTML = ""; // Clear previous messages
+        document.getElementById("success").appendChild(successMessage);
+    
+        // Clear the form
+        document.getElementById("contactForm").reset();
+      });
+    });
+    </script>
+    
+</body>
+</html>
