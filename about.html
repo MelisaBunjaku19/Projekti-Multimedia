@@ -205,79 +205,88 @@
       </section>
     </br> </br>
       
+    
+      <div id="preloader">
+        <div class="loader"></div>
+      </div>
+      <!-- Your existing content -->
       <section id="continuous-improvement">
         <div class="container">
-            <h2>Our Commitment to Continuous Improvement</h2>
-            <p>At CodeCrafters, we are dedicated to constantly improving our services, products, and skills. Here's how we do it:</p>
+          <h2>Our Commitment to Continuous Improvement</h2>
+          <p>At CodeCrafters, we are dedicated to constantly improving our services, products, and skills. Here's how we do it:</p>
     
-            <div class="slider-wrapper">
-                <button class="arrow" id="prev">&#10094;</button>
-                <div class="slider" id="slider">
-                    <div class="improvement-method">
-                        
-                        <h3>Ongoing Training Programs</h3>
-                        <p>We offer regular training programs for our team members to enhance their skills and stay updated with the latest technologies and industry trends.</p>
-                    </div>
+          <div class="slider-wrapper">
+            <button class="arrow" id="prev">&#10094;</button>
+            <div class="slider" id="slider">
+              <div class="improvement-method">
+                <h3>Ongoing Training Programs</h3>
+                <p>We offer regular training programs for our team members to enhance their skills and stay updated with the latest technologies and industry trends.</p>
+              </div>
     
-                    <div class="improvement-method">
-                      
-                        <h3>Feedback Mechanisms</h3>
-                        <p>We actively seek feedback from our clients, partners, and team members to identify areas for improvement and make necessary adjustments to our processes and products.</p>
-                    </div>
+              <div class="improvement-method">
+                <h3>Feedback Mechanisms</h3>
+                <p>We actively seek feedback from our clients, partners, and team members to identify areas for improvement and make necessary adjustments to our processes and products.</p>
+              </div>
     
-                    <div class="improvement-method">
-                     
-                        <h3>Investment in Research and Development</h3>
-                        <p>We allocate resources towards research and development initiatives to explore new technologies, innovate solutions, and anticipate future industry trends.</p>
-                    </div>
+              <div class="improvement-method">
+                <h3>Investment in Research and Development</h3>
+                <p>We allocate resources towards research and development initiatives to explore new technologies, innovate solutions, and anticipate future industry trends.</p>
+              </div>
     
-                    <div class="improvement-method">
-                      
-                        <h3>Collaboration and Teamwork</h3>
-                        <p>We foster a collaborative environment where team members work together, share knowledge, and support each other to achieve common goals.</p>
-                    </div>
+              <div class="improvement-method">
+                <h3>Collaboration and Teamwork</h3>
+                <p>We foster a collaborative environment where team members work together, share knowledge, and support each other to achieve common goals.</p>
+              </div>
     
-                    <div class="improvement-method">
-                     
-                        <h3>Innovation and Creativity</h3>
-                        <p>We encourage innovative thinking and creative problem-solving to develop unique solutions that meet our clients' needs.</p>
-                    </div>
+              <div class="improvement-method">
+                <h3>Innovation and Creativity</h3>
+                <p>We encourage innovative thinking and creative problem-solving to develop unique solutions that meet our clients' needs.</p>
+              </div>
     
-                    <div class="improvement-method">
-                       
-                        <h3>Customer Focus</h3>
-                        <p>We prioritize our customers' needs and work diligently to provide exceptional service and products that exceed their expectations.</p>
-                    </div>
-                </div>
-                <button class="arrow" id="next">&#10095;</button>
+              <div class="improvement-method">
+                <h3>Customer Focus</h3>
+                <p>We prioritize our customers' needs and work diligently to provide exceptional service and products that exceed their expectations.</p>
+              </div>
             </div>
+            <button class="arrow" id="next">&#10095;</button>
+          </div>
         </div>
-    </section>
+      </section>
+      <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        let currentIndex = 0;
-  
-        const slider = document.getElementById('slider');
-        const slides = document.querySelectorAll('.improvement-method');
-        const totalSlides = Math.ceil(slides.length / 3); // 3 slides per view
-  
-        document.getElementById('next').addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % totalSlides;
-          updateSlider();
-        });
-  
-        document.getElementById('prev').addEventListener('click', () => {
-          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-          updateSlider();
-        });
-  
-        function updateSlider() {
-          const offset = -currentIndex * 100;
-          slider.style.transform = `translateX(${offset}%)`;
-        }
-      });
-    </script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.improvement-method');
+    const totalSlides = Math.ceil(slides.length / 3); // 3 slides per view
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    });
+
+    function updateSlider() {
+      const offset = -currentIndex * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Hide preloader after content is fully loaded
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.style.display = 'none';
+    });
+  });
+
+
+      </script>
+    
+    
   </main>
 
   <footer id="footer">

@@ -227,68 +227,71 @@
   </section><!-- End Programming Languages Section -->
   
 </br> </br> 
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader"></div>
+</div>
+
 <section id="projects-gallery" class="section-bg">
-    <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h3 class="section-title">Projects Gallery</h3>
-            <h4 class="title">Some of our team's projects & ideas using different frameworks & programming languages!</h4>
-        </div>
-      </br> </br> </br>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Example Project Slide -->
-                <div class="swiper-slide">
-                    <div class="project-info">
-                        <h4>JobSeeker Platform</h4>
-                        <img src="assets/img/project1.jpg" alt="Project 1 Thumbnail">
-                        <h5>JobSeeker Platform is very useful for content around jobs & applying for jobs remotely by one click away</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-info">
-                        <h4>Airbnb</h4>
-                        <img src="assets/img/project2.jpeg" alt="Project 2 Thumbnail">
-                        <h5>Airbnb is a popular short-term vacation rental company with hosts and properties all over the world.</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-info">
-                        <h4>Walmart</h4>
-                        <img src="assets/img/project3.jpeg" alt="Project 3 Thumbnail">
-                        <h5>Walmart is a multinational retailer that operates a chain of hypermarkets.</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-info">
-                        <h4>ASOS</h4>
-                        <img src="assets/img/project4.jpeg" alt="Project 4 Thumbnail">
-                        <h5>ASOS is an online fashion and cosmetics retailer.</h5>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="project-info">
-                        <h4>Landing Page</h4>
-                        <img src="assets/img/project5.png" alt="Project 5 Thumbnail">
-                        <h5>Example of a perfect homepage on a website.</h5>
-                    </div>
-                </div>
-                <!-- Add more project slides as needed -->
-            </div>
-        </div>
-    </div>
+  <div class="container" data-aos="fade-up">
+      <div class="section-header">
+          <h3 class="section-title">Projects Gallery</h3>
+          <h4 class="title">Some of our team's projects & ideas using different frameworks & programming languages!</h4>
+      </div>
+    </br> </br> </br>
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <!-- Example Project Slide -->
+              <div class="swiper-slide">
+                  <div class="project-info">
+                      <h4>JobSeeker Platform</h4>
+                      <img src="assets/img/project1.jpg" alt="Project 1 Thumbnail">
+                      <h5>JobSeeker Platform is very useful for content around jobs & applying for jobs remotely by one click away</h5>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="project-info">
+                      <h4>Airbnb</h4>
+                      <img src="assets/img/project2.jpeg" alt="Project 2 Thumbnail">
+                      <h5>Airbnb is a popular short-term vacation rental company with hosts and properties all over the world.</h5>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="project-info">
+                      <h4>Walmart</h4>
+                      <img src="assets/img/project3.jpeg" alt="Project 3 Thumbnail">
+                      <h5>Walmart is a multinational retailer that operates a chain of hypermarkets.</h5>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="project-info">
+                      <h4>ASOS</h4>
+                      <img src="assets/img/project4.jpeg" alt="Project 4 Thumbnail">
+                      <h5>ASOS is an online fashion and cosmetics retailer.</h5>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="project-info">
+                      <h4>Landing Page</h4>
+                      <img src="assets/img/project5.png" alt="Project 5 Thumbnail">
+                      <h5>Example of a perfect homepage on a website.</h5>
+                  </div>
+              </div>
+              <!-- Add more project slides as needed -->
+          </div>
+      </div>
+  </div>
 </section>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 3000, // 5 seconds
-            disableOnInteraction: false,
-        },
-        loop: true,
+  document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.getElementById('preloader');
+
+    // Hide the preloader once the content is fully loaded
+    window.addEventListener('load', function() {
+      preloader.style.display = 'none';
     });
+  });
 </script>
 
 </br>
